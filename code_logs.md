@@ -8,6 +8,7 @@
 ## What I did:
 
 **19th Sept 2026**
+
 **SNR_value_plot**
 - code for obtaining the plot which gives flux and wavelenght values along with the SN_Median values for each fits file.
 
