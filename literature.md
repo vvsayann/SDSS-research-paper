@@ -1,4 +1,5 @@
 # Literature Review Log
+**Logging about the papers I read and writing down the findings and drawbacks of each.**
 
 
 
@@ -55,3 +56,33 @@ https://arxiv.org/pdf/2003.09469v1
 - Br13 dispersion near 16105A also lead to confusion.
 - calibration of optical spectra with time to compare with NIR lead to data errors.
 ------------
+**Read arXiv:2609.18590** (OB stars, tree-based ML)
+https://arxiv.org/pdf/2609.18590
+- Hand-measured equivalent widths were not used, but full normalized optical spectra (12,199 flux values) were used.
+- Data: 1,535 OB stars and 80 A supergiants from IACOB (S/N > 50) taken from SIMBAD.
+Compared 6 tree-based models: DT, RF, Extra Trees, XGBoost, LightGBM and HistGradientBoosting.
+- 3 experiments: O/B/A (LightGBM ~98%), 6 bins of the spectral type (RF ~89%), spectral type + luminosity class (XGBoost ~77%).
+- Showed that the models are based on real diagnostic lines: SHAP – used for O stars (He II), early B (Si III/O II/C III).
+- -----------
+**Drawbacks**
+Simbad labels are noisy (particularly for B stars) so accuracy is only a measure of consistency with Simbad.
+Tested only on a single uniform dataset (high resolution IACOB data downsampled to R = 4000); not tested on other instruments or other noisier survey data.
+The Be-star problem is not mentioned, as Be/Oe stars, Of?p stars and binary stars were excluded.
+- No error bars and just 6 coarse bins and one split.
+The problem of accuracy is not with the algorithm, but is actually a problem with the MK scheme itself.
+
+**Read Zenodo 13683948** (SDSS star classification, Random Forest)
+https://zenodo.org/records/13683948
+- Provides the classification of the main spectral classes A, F, G, K and carbon (C) stars from SDSS DR17.
+- Inputs: u, g, r, i, z band values + Teff, log g, redshift, pseudocolor, variance.
+- Imbalanced data using one Random Forest (100 trees) and compared 3 methods of imbalanced data: Original data, undersampling and SMOTE oversampling.
+- Applied to two test sets: fixed (real data only) and stratified (can include synthetic data).
+Accuracy for the stratified set: 0.87 original, 0.86 undersampled, 0.94 oversampled.
+- -----------
+**Drawbacks**
+- The 0.94 is inflated: Test set has synthetic SMOTE samples. This is remarkably low considering that the real-data fixed set has the value of ~0.59.
+Too few number of "O" stars, "B" stars are not classified.
+The “C” class consists of carbon stars, carbon white dwarfs and CVs, which is not a single class.
+Broad-band (not line-level) spectral class information. Teff already has much of the spectral class information encoded.
+- No algorithm, no feature-important analysis, no error bars.
+- The benchmark comparison contains various tasks and datasets (e.g. a 0.97 result is a binary A vs F).
