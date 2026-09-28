@@ -8,7 +8,9 @@
 
 ## What I did:
 
-**19th Sept 2026**
+
+
+**19-09-26**
 
 **SNR_value_plot**
 - code for obtaining the plot which gives flux and wavelenght values along with the SN_Median values for each fits file.
@@ -18,8 +20,11 @@
 which we can use.
 
 
-**21st sept 2026 16:13**
+**21-09-26 T16:13**
 
 **CSV Values**
 - Examined the csv values obtained which contains all the SN values, calculated the average
 which is around 18 for 60 files I have.
+
+**27-09-26 T18:00**
+- did some literature review's, created my own folder to add the review's and pdfs.

@@ -8,7 +8,7 @@
 
 ## What I did:
 
-**15th Sept 2026** 
+**15-09-26** 
 
 **Read arXiv:1802.01724** (NIR classification)
 https://arxiv.org/pdf/1802.01724
@@ -22,7 +22,7 @@ https://arxiv.org/pdf/1802.01724
 - In NIR spectra, very few spectral lines are available that can be appropiate for this method.
 
 ---------
-**17th Sept 2026**
+**17-09-26 T08:00**
 
 **Read Kyris et al (2022, A&A 657)**
 https://www.aanda.org/articles/aa/full_html/2022/01/aa40224-20/aa40224-20.html
@@ -40,7 +40,7 @@ https://www.aanda.org/articles/aa/full_html/2022/01/aa40224-20/aa40224-20.html
 - Not applicable on all OB stars, isn't valid for early B type comparatively.
 ------------
 
-**19th Sept 2026 , 14:18 hours**
+**19-09-26 T14:18**
 
 **Read arXiv:2003.09469v1 (classification using NIR spectrum)**
 https://arxiv.org/pdf/2003.09469v1
@@ -86,3 +86,29 @@ The “C” class consists of carbon stars, carbon white dwarfs and CVs, which i
 Broad-band (not line-level) spectral class information. Teff already has much of the spectral class information encoded.
 - No algorithm, no feature-important analysis, no error bars.
 - The benchmark comparison contains various tasks and datasets (e.g. a 0.97 result is a binary A vs F).
+
+**27-09-26 T17:30**
+
+**Read arXiv:2407.04163** (NIR Classifcation of B type stars)
+https://arxiv.org/pdf/2407.04163
+
+Taking R = 85000, the authors removed the binaries and Be stars from the B stars,
+while only the remaining 157 stars were classified as standard, the spectral was degraded
+to R~4000. They then proposed a new luminosity criteria for stars later than B2
+using the width of Balmer lines and used the traditional He I and Si lines for stars earlier than B2.
+The limitation ares related to the luminosity of the stars, sensitivity of B stars and that the bigger stars 
+have metal composition, and this method was non automated which took a longer amount of time.
+
+---------------------
+
+**28-09-26 T18:20**
+**Read arXiv:2003.09469v1**
+https://arxiv.org/pdf/2003.09469
+
+The authors chose a set of 316 B type stars from APOGEE H-Band spectra and took optical spectra from LAMOST,
+they fit the Br11 and Br13 line, calculated the EW and FWHM using a gaussian profile, The linear relation between the
+spectral type and Br11+Br13 EW which fits perfectly for B3-A0 type stars, however this process is only valid for A0-B3 
+type stars and not generic however this is a stable method for early B type star classification, the reason for it being weak
+is the weakness of the luminosity class due to blending of these lines with optical spectra / labels and has low resolution. 
+
+
