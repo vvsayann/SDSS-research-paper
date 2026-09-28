@@ -8,8 +8,7 @@
 
 ## What I did:
 
-**15-09-26** 
-
+15-09-26    
 **Read arXiv:1802.01724** (NIR classification)
 https://arxiv.org/pdf/1802.01724
 - Used NIR spectra to classify stars instead of opitcal spectra.
@@ -22,8 +21,7 @@ https://arxiv.org/pdf/1802.01724
 - In NIR spectra, very few spectral lines are available that can be appropiate for this method.
 
 ---------
-**17-09-26 T08:00**
-
+17-09-26 T08:00   
 **Read Kyris et al (2022, A&A 657)**
 https://www.aanda.org/articles/aa/full_html/2022/01/aa40224-20/aa40224-20.html
 - Uses Machine learning to automate classification of OB stars. 
@@ -40,8 +38,7 @@ https://www.aanda.org/articles/aa/full_html/2022/01/aa40224-20/aa40224-20.html
 - Not applicable on all OB stars, isn't valid for early B type comparatively.
 ------------
 
-**19-09-26 T14:18**
-
+**19-09-26 T14:18    
 **Read arXiv:2003.09469v1 (classification using NIR spectrum)**
 https://arxiv.org/pdf/2003.09469v1
 - 316 B-Star data obtained from APOGEE H-Band and LAMOST optical spectra. 
@@ -87,8 +84,7 @@ Broad-band (not line-level) spectral class information. Teff already has much of
 - No algorithm, no feature-important analysis, no error bars.
 - The benchmark comparison contains various tasks and datasets (e.g. a 0.97 result is a binary A vs F).
 
-**27-09-26 T17:30**
-
+27-09-26 T17:30    
 **Read arXiv:2407.04163** (NIR Classifcation of B type stars)
 https://arxiv.org/pdf/2407.04163
 
@@ -101,7 +97,7 @@ have metal composition, and this method was non automated which took a longer am
 
 ---------------------
 
-**28-09-26 T18:20**
+28-09-26 T18:20  
 **Read arXiv:2003.09469v1**
 https://arxiv.org/pdf/2003.09469
 
@@ -111,4 +107,19 @@ spectral type and Br11+Br13 EW which fits perfectly for B3-A0 type stars, howeve
 type stars and not generic however this is a stable method for early B type star classification, the reason for it being weak
 is the weakness of the luminosity class due to blending of these lines with optical spectra / labels and has low resolution. 
 
+----------------
+
+
+28-09-26 T22:26   
+**Flags & Labels**
+
+Flags basically tell us if a condition is true or false for example if any pixel in our data is good or bad,
+they basically come under the bitmask package and from the name 'bitmask' they assign bit values which are 'True' or 'False'.
+for example, in our file we have Zwarning flag which if 0 that means has no warnings, basically Zwarning tells us about the redshift
+and in case of our data we have no redshift i,e Zwarning is 0, along with that we have other flags such as platequality or specprimary 
+which describes the quality of our fit file.
+
+Where as, Labels is tag which explains what something is or what it means, for example Star type or name of a spectral line etc.
+forexample, a class would be 'Star' and subclass would be 'OB' which describes the type of star, the label Sourcetype and target type
+describe how we obtained the star data or how it was targeted.
 
