@@ -1,5 +1,5 @@
 # Literature Review Log
-**Logging about the papers I read and writing down the findings and drawbacks of each.**
+**Logging about the papers I read and writing down the findings and drawbacks of each and any theory work I read.**
 
 
 
@@ -53,6 +53,7 @@ https://arxiv.org/pdf/2003.09469v1
 - Br13 dispersion near 16105A also lead to confusion.
 - calibration of optical spectra with time to compare with NIR lead to data errors.
 ------------
+19-09-26 T16:10  
 **Read arXiv:2609.18590** (OB stars, tree-based ML)
 https://arxiv.org/pdf/2609.18590
 - Hand-measured equivalent widths were not used, but full normalized optical spectra (12,199 flux values) were used.
@@ -67,6 +68,7 @@ Simbad labels are noisy (particularly for B stars) so accuracy is only a measure
 - No error bars and just 6 coarse bins and one split.
 The problem of accuracy is not with the algorithm, but is actually a problem with the MK scheme itself.
 ----------
+19-09-26 T22:43
 **Read Zenodo 13683948** (SDSS star classification, Random Forest)
 https://zenodo.org/records/13683948
 - Provides the classification of the main spectral classes A, F, G, K and carbon (C) stars from SDSS DR17.
