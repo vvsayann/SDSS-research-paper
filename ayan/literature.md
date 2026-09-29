@@ -40,7 +40,7 @@ https://www.aanda.org/articles/aa/full_html/2022/01/aa40224-20/aa40224-20.html
 ------------
 
 19-09-26 T14:18    
-**Read arXiv:2003.09469v1 (classification using NIR spectrum)**
+**Read arXiv:2003.09469v1** (classification using NIR spectrum)
 https://arxiv.org/pdf/2003.09469v1
 - 316 B-Star data obtained from APOGEE H-Band and LAMOST optical spectra. 
 - For benchmarking, He I , Si II/V, Mg II and Balmer lines were used.
@@ -69,7 +69,7 @@ Simbad labels are noisy (particularly for B stars) so accuracy is only a measure
 - No error bars and just 6 coarse bins and one split.
 The problem of accuracy is not with the algorithm, but is actually a problem with the MK scheme itself.
 ----------
-19-09-26 T22:43
+19-09-26 T22:43  
 **Read Zenodo 13683948** (SDSS star classification, Random Forest)
 https://zenodo.org/records/13683948
 - Provides the classification of the main spectral classes A, F, G, K and carbon (C) stars from SDSS DR17.
@@ -143,7 +143,7 @@ The fits file contain different index value containing different details about t
 
 --------------
 
-30-09-26 T00:20
+30-09-26 T00:20  
 **Method for B type stars**  
 Normally Optical spectra was used for the classification of B type stars, it provides a wide range of 
 spectral lines such as He I , He II , Si I , balmer lines etc. However, the saturation and relative strength of 
