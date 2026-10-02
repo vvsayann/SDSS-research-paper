@@ -45,3 +45,11 @@ spectra better for automated fitting however the main drawback is that we cannot
 common line found in NIR and cannot be used as standard benchmarking line.
 
 -----------
+02-10-26 T18:44
+<a id="reason"></a>
+## Reason
+**Brackett line FWHM working better in cooler stars**
+The reason that FWHM (full width at half maximum is the flux between continuum and line minimum) works better with cooler stars
+is due to the ionization state of hydrogen which changes with the surrounding conditions such as pressure, for example a supergiant star 
+will have larger radius but lower surface gravity compared to a dwarf star so the pressure is lower. Brackett line become broader with pressure
+so thats why with stars that are cooler are narrower FWHM.
