@@ -104,12 +104,37 @@ have metal composition, and this method was non automated which took a longer am
 28-09-26 T18:20  
 **Read arXiv:2003.09469v1**
 https://arxiv.org/pdf/2003.09469
+Authors took 316 candidate B type stars manually selected in H Band from APOGEE (R~22,500) and took optical spectra from LAMOST
+(R~1800) to form a sample between optical and NIR spectra. Then they used MK (used when we need to find both the temperature and
+the luminiosity of the star) style criteria, they used the following line ratios for benchmarking / template matching:
 
-The authors chose a set of 316 B type stars from APOGEE H-Band spectra and took optical spectra from LAMOST,
-they fit the Br11 and Br13 line, calculated the EW and FWHM using a gaussian profile, The linear relation between the
-spectral type and Br11+Br13 EW which fits perfectly for B3-A0 type stars, however this process is only valid for A0-B3 
-type stars and not generic however this is a stable method for early B type star classification, the reason for it being weak
-is the weakness of the luminosity class due to blending of these lines with optical spectra / labels and has low resolution. 
+| Spectral Line             | Purpose                   |
+|---------------------------|---------------------------|
+| Si III/Si IV              | For early stars B0-B2/B3  | 
+| He I/Mg II and He I/Si II | For mid types B3-B5       | 
+| Balmer line and N II/He I | For luminosity indicators | 
+
+Then they measured the EW and FWHM of Br11 and Br13 line using gaussian profile. They used these EW results and developed a linear
+relationship with Br11+Br13 using jackknife resampling (You basically perform automation -> you run your classification but by 
+each iteration you remove one thing till you run out.) which was restricted to B3-A0 stars for better results and accuracy.
+
+**Key-results**: Br11 and Br13 increase linearly toward later spectral type (which is consistent with early O and early B type) however
+Br13 gets scattered due to being blended as wavelength increases to ~16000 A. The fitted relation(which was earlier obtained with the help of
+gaussian fitting)   
+**SpType = 0.503 * EW[Br11 + Br13]** classifies B3-A0 stars within one spectral subtype.
+FWHM of brackett lines work better at cooler stars compared to hot stars. See the [reason](./theory.md#Reason)  
+As the temperature increases, more metal lines appear but, they cannot be used as standard benchmark. 
+
+**Drawbacks** This calibration works well for only A0-B3 stars (the FWHM broadening being the main reason) along with this
+method can be dominated by stars since luminosity is playing an important role in NIR and the seperation between the luminosity
+and temperature isn't well established as well. As mentioned early Br13 was being blended but this issue was only flagged but not removed
+at all. The spectrums were picked exclusively knowing the emission lines so it cannot be used as a generic methods for other random
+spectras as well. 
+
+
+
+
+
 
 ----------------
 
