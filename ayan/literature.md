@@ -92,19 +92,44 @@ Broad-band (not line-level) spectral class information. Teff already has much of
 **Read arXiv:2407.04163** (NIR Classifcation of B type stars)
 https://arxiv.org/pdf/2407.04163
 
-Taking R = 85000, the authors removed the binaries and Be stars from the B stars,
-while only the remaining 157 stars were classified as standard, the spectral was degraded
-to R~4000. They then proposed a new luminosity criteria for stars later than B2
-using the width of Balmer lines and used the traditional He I and Si lines for stars earlier than B2.
-The limitation ares related to the luminosity of the stars, sensitivity of B stars and that the bigger stars 
-have metal composition, and this method was non automated which took a longer amount of time.
+The B star classification system had not been changed for a long time, older benchmarking criteria was not capable to distinguish
+between subtypes having high S/N and the existing benchmarking standards had some inconsistencies as well, authors wanted to make a new
+classification benchmarking / grid system, 
+
+| Spectral Line     | Purpose                      |
+|-------------------|------------------------------|
+| Balmer line       | Luminosity / surface gravity | 
+| Si/He I ratios    | Early B stars B0-B2          | 
+| He I/Mg II ratios | Temperature classification   | 
+
+They took HERMES high resolution spectra (R ~ 85000) which also had binary star system and Be stars as well which were later on removed to
+solely focus on B star classification and developing a grid / benchmarking system for it, only 157 stars remainded for this and the resolution was
+changed to ~ 4000, using the balmer line they introduced a luminosity criterion based on the balmer lines which was calibrated using 
+α Persei (a star in the constellation Perseus), IC 4665 (Summer beehive cluster in constellation Ophiuchus) and Pleiades with 
+Gaia distances, see [Gaia](./theory.md#Gaia-Distance)  
+and for the stars earlier than B2 Si /He I line were used because balmer lines are easily influenced due to gravity so with change in graivty
+they will use their reliability as well, 
+
+**Key-results** The authors made a new list of 158 B type star, this new benchmark method matches the star's surface gravity
+and true brightness which wasn't the case in the older methods. They also found that some very detailed types and separating some types
+like B6 and B7 isn't very useful at this resolution. One very important thing in the paper was that the star's rotation also changes the 
+He I / Mg II line ratio so older methods might work well for some stars.
+
+**Drawbacks** Some classes such as II, IV don't have good standard stars so they are harder to classify properly, This method also does not work
+that accurately for stars earlier than B2 and for very bright supergiants because their stellar winds can affect the spectral lines.
+This method is mainly designed for stars which have abuandace of metal lines similar to that of our sun which are at higher temperature so this might
+not be reliable as temperature varies a lot. check [Stellar](./theory.md#Stellar-winds)  
+Finally this method has to be done with careful / picked parameters such as the spectra picked, on top of that it has to be done manually by experts,
+it is not a computer based automation yet so it takes a long amount of time and can have a far greater possible error %.
+
+
 
 ---------------------
 
 28-09-26 T18:20  
 **Read arXiv:2003.09469v1**
 https://arxiv.org/pdf/2003.09469
-Authors took 316 candidate B type stars manually selected in H Band from APOGEE (R~22,500) and took optical spectra from LAMOST
+Authors took 316 candidate B type stars manually selected in H Band from APOGEE (R ~ 22,500) and took optical spectra from LAMOST
 (R~1800) to form a sample between optical and NIR spectra. Then they used MK (used when we need to find both the temperature and
 the luminiosity of the star) style criteria, they used the following line ratios for benchmarking / template matching:
 
@@ -127,14 +152,9 @@ As the temperature increases, more metal lines appear but, they cannot be used a
 
 **Drawbacks** This calibration works well for only A0-B3 stars (the FWHM broadening being the main reason) along with this
 method can be dominated by stars since luminosity is playing an important role in NIR and the seperation between the luminosity
-and temperature isn't well established as well. As mentioned early Br13 was being blended but this issue was only flagged but not removed
-at all. The spectrums were picked exclusively knowing the emission lines so it cannot be used as a generic methods for other random
+and temperature isn't well established as well, As mentioned early Br13 was being blended but this issue was only flagged but not removed
+at all, The spectrums were picked exclusively knowing the emission lines so it cannot be used as a generic methods for other random
 spectras as well. 
-
-
-
-
-
 
 ----------------
 

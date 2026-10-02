@@ -53,3 +53,20 @@ The reason that FWHM (full width at half maximum is the flux between continuum a
 is due to the ionization state of hydrogen which changes with the surrounding conditions such as pressure, for example a supergiant star 
 will have larger radius but lower surface gravity compared to a dwarf star so the pressure is lower. Brackett line become broader with pressure
 so thats why with stars that are cooler are narrower FWHM.
+
+--------------
+02-10-26 T19:51 
+## Gaia Distance 
+Gaia was an astrometric mission designed to make an accurate 3D map of the milky way,
+It calculates the red shift of the star and, then we can calculate the distance of the star using the red shift,
+it was used so that the luminosity classification was making physical sense with the distance.
+
+---------------
+
+02-10-26 T21:47
+## Stellar winds
+Stellar winds are the streams of gas flowing outwards from the surface of the star into the space.
+**How it affects our classification method** For very bright B type supergiants, these winds are very strong. Since the paper's
+method tries to estime the luminosity class using width and shape of balmer line as they depend on the star's surface gravity,
+but in case of very luminous supergiants, strong interstellar winds can also change the Balmer line profile so the line shape also depends
+on interstellar winds along with surface, 
