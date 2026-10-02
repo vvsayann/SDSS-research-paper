@@ -48,7 +48,7 @@ common line found in NIR and cannot be used as standard benchmarking line.
 02-10-26 T18:44
 <a id="reason"></a>
 ## Reason
-**Brackett line FWHM working better in cooler stars**
+**Brackett line FWHM working better in cooler stars**  
 The reason that FWHM (full width at half maximum is the flux between continuum and line minimum) works better with cooler stars
 is due to the ionization state of hydrogen which changes with the surrounding conditions such as pressure, for example a supergiant star 
 will have larger radius but lower surface gravity compared to a dwarf star so the pressure is lower. Brackett line become broader with pressure
@@ -65,8 +65,8 @@ it was used so that the luminosity classification was making physical sense with
 
 02-10-26 T21:47
 ## Stellar winds
-Stellar winds are the streams of gas flowing outwards from the surface of the star into the space.
-**How it affects our classification method** For very bright B type supergiants, these winds are very strong. Since the paper's
+Stellar winds are the streams of gas flowing outwards from the surface of the star into the space.  
+**How it affects our classification method:**  For very bright B type supergiants, these winds are very strong. Since the paper's
 method tries to estime the luminosity class using width and shape of balmer line as they depend on the star's surface gravity,
 but in case of very luminous supergiants, strong interstellar winds can also change the Balmer line profile so the line shape also depends
 on interstellar winds along with surface, 

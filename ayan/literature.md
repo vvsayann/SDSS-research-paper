@@ -110,12 +110,12 @@ Gaia distances, see [Gaia](./theory.md#Gaia-Distance)
 and for the stars earlier than B2 Si /He I line were used because balmer lines are easily influenced due to gravity so with change in graivty
 they will use their reliability as well, 
 
-**Key-results** The authors made a new list of 158 B type star, this new benchmark method matches the star's surface gravity
+**Key-results:** The authors made a new list of 158 B type star, this new benchmark method matches the star's surface gravity
 and true brightness which wasn't the case in the older methods. They also found that some very detailed types and separating some types
 like B6 and B7 isn't very useful at this resolution. One very important thing in the paper was that the star's rotation also changes the 
 He I / Mg II line ratio so older methods might work well for some stars.
 
-**Drawbacks** Some classes such as II, IV don't have good standard stars so they are harder to classify properly, This method also does not work
+**Drawbacks:** Some classes such as II, IV don't have good standard stars so they are harder to classify properly, This method also does not work
 that accurately for stars earlier than B2 and for very bright supergiants because their stellar winds can affect the spectral lines.
 This method is mainly designed for stars which have abuandace of metal lines similar to that of our sun which are at higher temperature so this might
 not be reliable as temperature varies a lot. check [Stellar](./theory.md#Stellar-winds)  
@@ -127,8 +127,8 @@ it is not a computer based automation yet so it takes a long amount of time and 
 ---------------------
 
 28-09-26 T18:20  
-**Read arXiv:2003.09469v1**
-https://arxiv.org/pdf/2003.09469
+**Read arXiv:2003.09469v1**  
+https://arxiv.org/pdf/2003.09469  
 Authors took 316 candidate B type stars manually selected in H Band from APOGEE (R ~ 22,500) and took optical spectra from LAMOST
 (R~1800) to form a sample between optical and NIR spectra. Then they used MK (used when we need to find both the temperature and
 the luminiosity of the star) style criteria, they used the following line ratios for benchmarking / template matching:
@@ -143,14 +143,14 @@ Then they measured the EW and FWHM of Br11 and Br13 line using gaussian profile.
 relationship with Br11+Br13 using jackknife resampling (You basically perform automation -> you run your classification but by 
 each iteration you remove one thing till you run out.) which was restricted to B3-A0 stars for better results and accuracy.
 
-**Key-results**: Br11 and Br13 increase linearly toward later spectral type (which is consistent with early O and early B type) however
+**Key-results:** Br11 and Br13 increase linearly toward later spectral type (which is consistent with early O and early B type) however
 Br13 gets scattered due to being blended as wavelength increases to ~16000 A. The fitted relation(which was earlier obtained with the help of
 gaussian fitting)   
 **SpType = 0.503 * EW[Br11 + Br13]** classifies B3-A0 stars within one spectral subtype.
 FWHM of brackett lines work better at cooler stars compared to hot stars. See the [reason](./theory.md#Reason)  
 As the temperature increases, more metal lines appear but, they cannot be used as standard benchmark. 
 
-**Drawbacks** This calibration works well for only A0-B3 stars (the FWHM broadening being the main reason) along with this
+**Drawbacks:** This calibration works well for only A0-B3 stars (the FWHM broadening being the main reason) along with this
 method can be dominated by stars since luminosity is playing an important role in NIR and the seperation between the luminosity
 and temperature isn't well established as well, As mentioned early Br13 was being blended but this issue was only flagged but not removed
 at all, The spectrums were picked exclusively knowing the emission lines so it cannot be used as a generic methods for other random
