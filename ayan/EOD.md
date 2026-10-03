@@ -5,4 +5,10 @@
 Changed the paper details completely which were logged on 28-09-26 and 27-09-26, added appropriate tables,
 more information so they give standout details when read about the paper, added theory work in theory.md and 
 did md file linking so, it has more detail while still looking clean and not messy. 
+----------
 
+03-10-2026  
+Did some searching on classification of other stars such as Be stars, how it works out for them and what methods
+give them the best accuracy and results, except that Read 1.5 NIR papers for B and O stars, will log them tomorrow 
+and will continue looking at the classification I read today.
+----------
