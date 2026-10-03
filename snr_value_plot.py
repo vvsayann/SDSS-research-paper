@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from astropy.io import fits
 
-FITS_FILE =  r'C:\Users\yoboy\Desktop\SDSS-research-paper-\Spectrum\spec-0266-51630-0098.fits'
+FITS_FILE =  r'C:\Users\yoboy\Desktop\SDSS-research-paper\Spectrum\spec-0267-51608-0271.fits'
 hdul = fits.open(FITS_FILE)
 
 # --- Load data -------------------------------------------------------------
