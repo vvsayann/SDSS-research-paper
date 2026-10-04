@@ -13,6 +13,6 @@ give them the best accuracy and results, except that Read 1.5 NIR papers for B a
 and will continue looking at the classification I read today.
 ----------
 
-04-03-2026 
+04-03-2026   
 Logged two new papers, one on dwarfs and supergiants of O/B type one for Infrared and optical classification comparison
 between O type and B type. Wrote related theory in theory.md and linked mds together for better understanding.
