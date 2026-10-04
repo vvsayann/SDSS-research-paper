@@ -158,9 +158,76 @@ spectras as well.
 
 ----------------
 
-02-10-26 T22:03  
-**Read arXiv:1802.01724**  
-https://arxiv.org/pdf/1802.01724  
+03-10-26 T22:03  
+**Read arXiv:2607.15409**  
+https://arxiv.org/pdf/2607.15409  
+B type stars have a very short amount of time in pre-main-sequence (PMS) before they get a stable core hydrogen burning. Authors found
+some stars around the orion nebula that were previously classified with luminosity class I-III, but they combined spectral classification to re-classify
+these stars again and improve the data-set of early stars around Orin.
+
+| Feature                                      | Purpose                                                  |
+|----------------------------------------------|----------------------------------------------------------|
+| Gaia DR3, 2MASS / WISE                       | Select candidiates and construct optical / infrared CMDs | 
+| Br11 + Br13 EW's                             | Estimate infrared spectral types from B2 to A0           | 
+| Si/ He line ratios                           | Classifiy B stars optically                              |
+| Balmer line profiles and optical metal lines | Check luminosity class and evolved star labels           | 
+| PARSEC evolutionary tracks                   | Estime age, mass of the star                             |  
+
+Authors matched sources in Gaia, 2MASS within 1arc second searching a specific region around the Orion Nebula. Along with that the brightness and color cuts reduced
+~ 49000 sources to 53 B/early A type candidates, Out of these 53 37 had infrared spectral, 27 had optical spectra and 48 had at least one kind of the spectra. They took 
+infrared data from APOGEE, while optical was obtained from LAMOST and ESO observations of archives. For infrared classification they developed a linear relationship 
+between spectral type and combined the strength of Br11 and Br13, using three benchmarking templates per subtype from A0 to B2. Meanwhile, the optical line ratios and direct
+comparisons also worked out, They also examined the balmer lines and metal lines [metal-lines](./theory.md#Metal-lines)  , for early B stars without optical spectra they used 
+NIR and surface gravity measures to provide luminosity constraints.  
+**Key-results:** Authors obtained spectral classifications for 48 stars and age/mass for all 53 they narrowed down, optical and infrared
+classifications generally narrowed down to one spectral subtype, several stars which were previously classified in the subtype I-III showved different class such as V-like spectra
+according to this method. Some stars whoed variable brackett profiles, emission, magnetic pecularities making them useful for a following classification method similar to this one.    
+**Drawbacks:** This method is very unreliable and incomplete because stars needed detections in all three catalogues and had to pass color cuts manually, compared to another 
+catalogue 16 similar early type stars were missing in this sample while this sample included 23 absent form the comparison catalogue.
+The brackett linear relation becames unreliable to stars later than A0 and emission can disrupt it. 
+
+
+----------------------
+
+04-10-26 T22:33  
+
+**Read Hanson_1998**  
+https://iopscience.iop.org/article/10.1086/300556/pdf  
+Early studies showed that hydrogen and helium lines in the H band change with the spectral type, but had too few standards to separate temperature effects from luminosity effects.
+The authors investigated these luminosity affects and developed a compact H-band classification scheme for late O and B stars.
+
+| Spectral feature                 | Purpose                                                                             |
+|----------------------------------|-------------------------------------------------------------------------------------|
+| Br11 hydrogen line               | Spectral-type information, its width also helps distinguish dwarfs from supergiants |
+| He II                            | Indicates O-type atmospheres                                                        |
+| He I                             | Helps classify OB stars, but depends on both temperature and luminosity             |
+| Br11/He I equivalent-width ratio | Helps distinguish early/mid-B dwarfs from supergiants of similar spectral type      |
+
+Authors studies 34 spectroscopic standards spanning late O to late B, concentrating on dwarfs and supergiants. Spectra were obtained in 1997 with Fspec at the multiple mirror telescope
+and Bok telescope at ~ 2000. S/N was > 120, although some spectra were at ~ 100. The classification features fit within the small interval 1.66 to 1.7 um.
+Atmospheric absorption was removed using A-dwarf standards. They measured EW, and examined line profiles. They compared these measurements with established optical spectral types
+and luminosity classes. Their approach consisted first that whether the star was a dwarf or supergiant, then do He and Br11 strength detection.  
+**Key-results:** At the same B spectral type, supergiants generally showed stronger He I and weaker Br11 than dwarfs, while dwarfs showed broader Br11 profiles [Br11](./theory.md#Br11). Therefore, these line
+strengths cannot be used for temperature indication without keeping the surface gravity and luminosity in consideration. He II was only detection in O type star in this example, around O9.
+They followed these set of instructions for classification of dwarfs  
+
+| Observed absorption pattern       | Suggested classification |
+|-----------------------------------|--------------------------|
+| Br11, He I and He II all detected | Late O or earlier        |
+| Br11, He I , no detected He II    | O9–B1                    |
+| Br11 , with He I                  | B2–B3                    |
+| Br11  , without detected He I     | Late B to early A        |
+
+These are broad guides and they weren't limited to this, but they followed these roughly. The authors suggested a precision of ~ two to three spectral subclasses when luminosity is known.
+The Br11/He I ratio is generally larger in early/mid B dwarfs than in supergiants of the same type.
+They also recommended S/N > 100 , R ~ 2000 or higher and comparison standards observed similar resolutions.  
+**Drawbacks:** The 34 star sample is too small to make this as a reliable benchmarking guide that can be used for any sample. Temperature and luminosity are independent
+Br11 measurements are affected by the removal of hydrogen absorption lines from atmospheric correct and by locating the continuum in the lines, the authors advised against trusting Br11
+EW to better than 0.3A. The narrow wavelength interval includes only Br11 from hydrogen brackett series, testing additional brackett lines requires wider coverage and the possible He II 
+luminosity effect needs a larger star sample
+
+
+
 
 
 

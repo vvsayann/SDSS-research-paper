@@ -12,3 +12,7 @@ Did some searching on classification of other stars such as Be stars, how it wor
 give them the best accuracy and results, except that Read 1.5 NIR papers for B and O stars, will log them tomorrow 
 and will continue looking at the classification I read today.
 ----------
+
+04-03-2026 
+Logged two new papers, one on dwarfs and supergiants of O/B type one for Infrared and optical classification comparison
+between O type and B type. Wrote related theory in theory.md and linked mds together for better understanding.

@@ -70,3 +70,16 @@ Stellar winds are the streams of gas flowing outwards from the surface of the st
 method tries to estime the luminosity class using width and shape of balmer line as they depend on the star's surface gravity,
 but in case of very luminous supergiants, strong interstellar winds can also change the Balmer line profile so the line shape also depends
 on interstellar winds along with surface, 
+-----------
+
+03-10-26 T22:15
+## Metal lines
+I've noticed that B type stars in NIR mostly have abuandance of metal lines while He I and He II are still present in some amount, however this is not
+the case for O type stars, they only have He and Si lines for the most part. 
+------------
+
+04-10-26 T 22:40  
+## Br11
+Dwarfs show broader Br11 profiles mainly because they have high surface gravity, which produces a denser pressure gas in the atmosphere where the line forms,
+Nearby electrons and ions create electric fields that disturb hydrogen’s energy levels. This spreads the absorption over a wider range of wavelengths,
+producing broad wings around Br11.
