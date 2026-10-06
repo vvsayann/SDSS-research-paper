@@ -63,6 +63,25 @@ it was used so that the luminosity classification was making physical sense with
 
 ---------------
 
+02-10-26 T20:48
+## Luminosity Criteria  
+**FOR arXiv:2407.04163**  
+The main criteria for luminosity the paper (2407.04163) is the width of wings of H balmer absorption lines especially H-Alpha. Keeping the spectral 
+subtype same, main sequence stars have a higher surface gravity and broader wings, where as giants and supergiants have comparatively low surface gravity
+and the wings are narrower as well. The authors assign the class by comparing these profiles for standard stars. This criterion works best for B2 or later type as 
+for earlier stars the wings become less sensitive to luminosity so they used silicon to helium lines for these types (Si III @ ~ 4553 A & He I @ ~ 4387 A), they generally increase
+with luminosity. Near B0 subtype He II absorption is also useful.
+
+**FOR arXiv:2003.09469v1**  
+In this paper, they determined the luminosity class from optical spectra using H-Gamma and H-Alpha along with prominent N ,  Si, He features to distinguish giants 
+and supergiants from main sequence stars. Then they used IR criterion using Br11 and Br13 Hydrogen line, they compared the EW(measures absorption strength) with their FWHM(measures line width). 
+For later B stars giants and supergiants have narrower brackett lines as compared to that of main sequence stars. For earlier B stars ~ till B3, the lines overlap making the 
+criterion unreliable for them. 
+
+---------------
+
+
+
 02-10-26 T21:47
 ## Stellar winds
 Stellar winds are the streams of gas flowing outwards from the surface of the star into the space.  
@@ -83,3 +102,23 @@ the case for O type stars, they only have He and Si lines for the most part.
 Dwarfs show broader Br11 profiles mainly because they have high surface gravity, which produces a denser pressure gas in the atmosphere where the line forms,
 Nearby electrons and ions create electric fields that disturb hydrogen’s energy levels. This spreads the absorption over a wider range of wavelengths,
 producing broad wings around Br11.
+
+----------
+
+06-10-26 T17:12
+## Spitzer and hershel telsecope
+
+**Spitzer**  
+Launched in 2003 by NASA for Infrared observations to observe objects hidden by gas and dust clouds. It had an 85 cm mirror and in the start could observe
+between 3-180 micrometer wavelength. The instrument had a cool down feature that would keep them cool so their own heat won't interfere with the incoming IR 
+signals. Spitzer was used to study young stars, dusty planetary systems, exoplanets and distant galaxies. The biggest discovery made by spitzer was finding a ring
+of saturn with diameter 300 times than that of the planet. Some other key discoveries are TRAPPIST-1 which discovered seven earth like planets. Its IR observations
+can reveal real dust emissions around an OB star which we can compare if the OB star lies near a star forming region or near a dust structure. 
+
+
+
+**Hershel**   
+Hershel was an ESA mission launched in 2009 which ended in 2013 after it ran out of the Helium coolant system which was used to keep the instruments cool. It had a
+3.5 metre mirror and could observe between 55-670 micrometer which is better and accurate than Spitzer. It discovered some gas and dust filaments in molecular clouds which
+were a birthplace for stellar structure. For our OB star analysis, the data can help us determine a relationship how massive stars interact with their birthclouds like how earlier stars
+lie near warmer dust.

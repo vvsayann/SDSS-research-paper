@@ -16,3 +16,11 @@ and will continue looking at the classification I read today.
 04-03-2026   
 Logged two new papers, one on dwarfs and supergiants of O/B type one for Infrared and optical classification comparison
 between O type and B type. Wrote related theory in theory.md and linked mds together for better understanding.
+
+------------
+05-03-2026
+No work as such, was busy with course studies.
+
+---------
+06-10-2026
+linked the luminosity criteria to the literature.md which i forgot earlier, added theory about spitzer and hershel telescope.

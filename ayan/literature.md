@@ -131,7 +131,7 @@ it is not a computer based automation yet so it takes a long amount of time and 
 https://arxiv.org/pdf/2003.09469  
 Authors took 316 candidate B type stars manually selected in H Band from APOGEE (R ~ 22,500) and took optical spectra from LAMOST
 (R~1800) to form a sample between optical and NIR spectra. Then they used MK (used when we need to find both the temperature and
-the luminiosity of the star) style criteria, they used the following line ratios for benchmarking / template matching:
+the luminiosity of the star) style criteria [luminosity-criteria](./theory.md#luminosity-criteria), they used the following line ratios for benchmarking / template matching:
 
 | Spectral Line             | Purpose                   |
 |---------------------------|---------------------------|
@@ -224,7 +224,11 @@ They also recommended S/N > 100 , R ~ 2000 or higher and comparison standards ob
 **Drawbacks:** The 34 star sample is too small to make this as a reliable benchmarking guide that can be used for any sample. Temperature and luminosity are independent
 Br11 measurements are affected by the removal of hydrogen absorption lines from atmospheric correct and by locating the continuum in the lines, the authors advised against trusting Br11
 EW to better than 0.3A. The narrow wavelength interval includes only Br11 from hydrogen brackett series, testing additional brackett lines requires wider coverage and the possible He II 
-luminosity effect needs a larger star sample
+luminosity effect needs a larger star sample.
+
+-------------------
+
+
 
 
 
