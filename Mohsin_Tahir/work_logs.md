@@ -17,3 +17,6 @@ and reviewed (Roman-Lopes et al. 2024)
 
 10/6/26
 - added detail explanation on my existing litrature reviews and added research paper pdfs on seperate folders
+
+10/7/26
+- read and reviewed  https://arxiv.org/pdf/2203.14538 and reviewed only some part of https://arxiv.org/pdf/2402.05184
