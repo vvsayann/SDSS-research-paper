@@ -24,3 +24,13 @@ No work as such, was busy with course studies.
 ---------
 06-10-2026
 linked the luminosity criteria to the literature.md which i forgot earlier, added theory about spitzer and hershel telescope.
+
+----------
+
+
+07-10-2026 
+Read 1 paper which ill log later along with the current paper im reading which ill continue tomorrow
+
+-------------
+
+
