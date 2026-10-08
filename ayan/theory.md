@@ -83,7 +83,7 @@ criterion unreliable for them.
 
 
 02-10-26 T21:47
-## Stellar winds  
+## Stellar winds    
 Stellar winds are the streams of gas flowing outwards from the surface of the star into the space.  
 **How it affects our classification method:**  For very bright B type supergiants, these winds are very strong. Since the paper's
 method tries to estime the luminosity class using width and shape of balmer line as they depend on the star's surface gravity,
@@ -92,7 +92,7 @@ on interstellar winds along with surface,
 -----------
 
 03-10-26 T22:15
-## Metal lines  
+## Metal lines    
 I've noticed that B type stars in NIR mostly have abuandance of metal lines while He I and He II are still present in some amount, however this is not
 the case for O type stars, they only have He and Si lines for the most part. 
 ------------
