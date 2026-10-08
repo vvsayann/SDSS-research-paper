@@ -106,7 +106,7 @@ They took HERMES high resolution spectra (R ~ 85000) which also had binary star 
 solely focus on B star classification and developing a grid / benchmarking system for it, only 157 stars remainded for this and the resolution was
 changed to ~ 4000, using the balmer line they introduced a luminosity criterion based on the balmer lines which was calibrated using 
 α Persei (a star in the constellation Perseus), IC 4665 (Summer beehive cluster in constellation Ophiuchus) and Pleiades with 
-Gaia distances, see [Gaia](./theory.md#Gaia-Distance)  
+Gaia distances, see [Gaia](./theory.md#gaia-distance-)  
 and for the stars earlier than B2 Si /He I line were used because balmer lines are easily influenced due to gravity so with change in graivty
 they will use their reliability as well, 
 
@@ -147,7 +147,7 @@ each iteration you remove one thing till you run out.) which was restricted to B
 Br13 gets scattered due to being blended as wavelength increases to ~16000 A. The fitted relation(which was earlier obtained with the help of
 gaussian fitting)   
 **SpType = 0.503 * EW[Br11 + Br13]** classifies B3-A0 stars within one spectral subtype.
-FWHM of brackett lines work better at cooler stars compared to hot stars. See the [reason](./theory.md#Reason)  
+FWHM of brackett lines work better at cooler stars compared to hot stars. See the [reason](./theory.md#fwhm)  
 As the temperature increases, more metal lines appear but, they cannot be used as standard benchmark. 
 
 **Drawbacks:** This calibration works well for only A0-B3 stars (the FWHM broadening being the main reason) along with this
@@ -177,7 +177,7 @@ Authors matched sources in Gaia, 2MASS within 1arc second searching a specific r
 ~ 49000 sources to 53 B/early A type candidates, Out of these 53 37 had infrared spectral, 27 had optical spectra and 48 had at least one kind of the spectra. They took 
 infrared data from APOGEE, while optical was obtained from LAMOST and ESO observations of archives. For infrared classification they developed a linear relationship 
 between spectral type and combined the strength of Br11 and Br13, using three benchmarking templates per subtype from A0 to B2. Meanwhile, the optical line ratios and direct
-comparisons also worked out, They also examined the balmer lines and metal lines [metal-lines](./theory.md#Metal-lines)  , for early B stars without optical spectra they used 
+comparisons also worked out, They also examined the balmer lines and metal lines [metal-lines](./theory.md#metal-lines)  , for early B stars without optical spectra they used 
 NIR and surface gravity measures to provide luminosity constraints.  
 **Key-results:** Authors obtained spectral classifications for 48 stars and age/mass for all 53 they narrowed down, optical and infrared
 classifications generally narrowed down to one spectral subtype, several stars which were previously classified in the subtype I-III showved different class such as V-like spectra
@@ -207,7 +207,7 @@ Authors studies 34 spectroscopic standards spanning late O to late B, concentrat
 and Bok telescope at ~ 2000. S/N was > 120, although some spectra were at ~ 100. The classification features fit within the small interval 1.66 to 1.7 um.
 Atmospheric absorption was removed using A-dwarf standards. They measured EW, and examined line profiles. They compared these measurements with established optical spectral types
 and luminosity classes. Their approach consisted first that whether the star was a dwarf or supergiant, then do He and Br11 strength detection.  
-**Key-results:** At the same B spectral type, supergiants generally showed stronger He I and weaker Br11 than dwarfs, while dwarfs showed broader Br11 profiles [Br11](./theory.md#Br11). Therefore, these line
+**Key-results:** At the same B spectral type, supergiants generally showed stronger He I and weaker Br11 than dwarfs, while dwarfs showed broader Br11 profiles, read  [Br11](./theory.md#br11). Therefore, these line
 strengths cannot be used for temperature indication without keeping the surface gravity and luminosity in consideration. He II was only detection in O type star in this example, around O9.
 They followed these set of instructions for classification of dwarfs  
 
@@ -227,6 +227,98 @@ EW to better than 0.3A. The narrow wavelength interval includes only Br11 from h
 luminosity effect needs a larger star sample.
 
 -------------------
+
+
+07-10-2026 T22:10  
+**Read arXiv:1902.07607**  
+https://arxiv.org/pdf/1902.07607  
+OB stars play an important rule for the studying of the milky way's structure, composition chemically and the stellar evolution but the catalogues prior to this method contained bright objects nearby 
+the target stars. The catalogues were missing B stars, so the authors decided to develop a new catalogue using LAMOST DR5 and targetted the outer arms of the galaxy and tried testing that wheter MK class can 
+assign spectral subtype and luminosity classes to these stars with accuracy or no. 
+
+| Spectral line                                                              | Purpose                                                                                                                         |
+|----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| Ca II K, **3933 Å**, versus Hγ, **4340 Å**                                 | Choose hot star candidates that have relatively low calcium and hydrogen absorption                                             |
+| Mean equivalent width of 9 Fe index                                        | Remove cooler stars that have higher metal absorption                                                                           |
+| He I, especially **4471 Å**                                                | Be able to identify B-star spectra from visual inspection                                                                       |
+| He II **4200, 4541 and 4686 Å**                                            | Determine subtype and luminosity of O stars                                                                                     |
+| He I **4471 Å** / Mg II **4481 Å**                                         | Be able to tell the difference between B spectral subtypes, and be able to discriminate between late B and early A contaminants |
+| Si IV **4089 Å** and Si III **4552–4568–4575 Å**                           | Draw conclusions about early B stars and their luminosity                                                                       |
+| Si II **4128–4130 Å**, C II **4267 Å**, N II **3995 Å**, and O II features | Other subtype and luminosity diagnostics                                                                                        |
+| Balmer-line strengths and profiles                                         | Provide assistance with temperature and luminosity classification                                                               |
+| N III **4634–4640–4642 Å**                                                 | Other information on O-star subtypes and luminosity.                                                                            |
+
+LAMOST is a 4m telescope which is capable of observing ~ 4000 spectra per light exposure. Low resolution spectra cover 370-900nm with R ~ 1800 with main targets of r 9 to 18 magnitudes. DR5 consisted of around
+8 million spectra. Authors used  S/N > 15 cap which left only 5 million spectra and repeated observations  i,e all of these do not belong to a different star, some could be of same.
+Authors then pursued to measure the EW of the spectral lines further they used 9 iron (Fe) index rather than relying on just spectral lines
+Their first criteria was 
+1. EW(Ca II K) < 2.5 − EW(Hγ)/8
+2. −4.5 ≤ EW(Hγ) ≤14 Å
+This gave them around 160,000 candidate spectra which can be used for their process later on. They rejected the spectra which contained strong Fe absorption lines which resulted in spectra getting narrowed down to 
+12200 approximately, These were inspected using H, He and metal features. Their spectra were checked manually by different people so error % could be shortened down. Spectra which did not have He features were exempted. 
+For further detail classification, they chose 22,000 OB star spectra using MKCLASS. This automation compares spectra using MK standards and degraded the template from 1.8Å to 2.8Å resolution which was according to the LAMOST 
+blue spectrum resolution. They tested this method using randomly selected spectra of around 5000 using a S/N > 15 and Galactic latitude < 20° [Galactic-Latitude](./theory.md#galactic-latitude-)cap. They double checked this with classification of 1000 OB spectra out of which 
+646 had meaningful MKCLASS output rated good or better which was used as accuracy comparison for their own results.
+
+**Key-results:** The catalogue contains:
+
+| Stars           | Quantity                       | 
+|-----------------|--------------------------------|
+| Normal O stars  | 135 spectra of 91 stars        | 
+| Normal B stars  | 21,658 spectra of 15,087 stars | 
+| Hot subdwarfs   | 948 spectra of 727 stars       | 
+| White dwarfs    | 160 spectra of 127 stars       | 
+
+The catalogue has around 22,900 spectra of 16,000 stars, but it also has subdwarfs and white dwarfs. The normal OB stars consist of total ~ 15,000 stars out of which 91 are O stars and rest are B stars. 
+This method intially classified about 89 (22%) of stars earlier than B7 but later on this dropped to 57 (16% ) for B8 and B9 as their luminosity is very close to that of early A type stars. For spectra of good quality, MKCLASS
+gave results very close to manual classification.  
+**Drawbacks:** Out of the 15,000 OB star spectra, around ~ 6500 (43%) got failed MKCLASS output and some classifications were wrong physically. This method applies to selected subset rather than being automated
+for any type of spectra. The template cannot classify stars earlier than O9 with good accuracy due to abundance of metal lines, rotation, emission and the data quality (spectra) obtained along with weak spectral lines due to luminosity. 
+low S/N, bad pixels, background subtraction and unusually strong He lines can also cause failures. The main drawback about this method that it requires too many manual inspections when picking spectra which can be slow as well as can cause error
+compared to machine accuracy. Metal features which are sensitive due to luminosity are weak at LAMOST resolution making the classification uncertain. 
+
+-----------------
+
+08-10-2026 T16:15  
+**Read arXiv:2110.10669**  
+https://arxiv.org/pdf/2110.10669  
+older B star classifcation standards had inconsistend labels and the reference stars that were used were unsuitable and with time the classifcation needed an upgrade. The authors revised the grid and updated the criteria 
+for the classification in order to the modern spectra. A standard star is used as a reference star whose spectrum defines the whole classification process. A standard star should be a single star not binary as the combined spectrum
+can cause misleading result in other star classification. 
+
+| Spectral line           | Purpose                              |
+|-------------------------|--------------------------------------|
+| Balmer-line wing widths | Mid/late-B luminosity classification |
+| Si III/Si IV ratios     | Early-B temperature classification   |
+| Si/He ratios            | Early-B luminosity classification    |
+| He I/Mg II ratios       | Later-B temperature classification   |
+
+The authors obtained multiple spectra at R ~ 85,000 from HERMES, removed spectras that would cause problems later on such as the ones obtained from double-lined binaries and Be stars. They tok 157 reference stars. They dropped the resolution to 
+~ 4000 and classified using comparison. They also used gaia distances [gaia-distance](./theory.md#gaia-distance-) to help making the grid. They obtained the temperature information using ratios between different silicon lines. Hydrogen lines to
+obtain the surface pressure, broader lines mean greater pressure, By obtaining surface gravity they could easily distuingish between luminosity classes. Hence, temperature and surface gravity are considered together.  
+**Key-results:** The new grid is more consistent, they authors found out that subtypes such as B6 and B7 were not needed at that resolution and they also demonstarated that stellar rotation influences spectral line measurements. Their big work is that
+the grid is now more consistent to the actual physical characteristic of B-type stars especially surface gravity and luminosity which wasn't the case in the old grid system. However, this does not mean that this new grid system can find / calculate any
+physical property of the star, it just means it gives consistent measurements of those properties.  
+**Drawbacks:**  The revised grid has drastic improvement but it has some limitations:
+1. Balmer wings are less effective when we want to determine the luminosity for hottest B type stars.
+2. Stellar winds [stellar-winds](./theory.md#stellar-winds) mess up the spectra of bright supergiant. 
+3. some luminosity classes are still difficult to distinguish as the difference gap between them is very small. 
+4. Different chemical abundance's also affect the spectral line strength, for hotter B type stars they have more metal lines present. 
+5. Constant rotation of the star broadens and blends the spectral lines together.
+
+-----------------------
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

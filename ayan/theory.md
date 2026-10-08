@@ -47,7 +47,7 @@ common line found in NIR and cannot be used as standard benchmarking line.
 -----------
 02-10-26 T18:44
 <a id="reason"></a>
-## Reason
+## FWHM
 **Brackett line FWHM working better in cooler stars**  
 The reason that FWHM (full width at half maximum is the flux between continuum and line minimum) works better with cooler stars
 is due to the ionization state of hydrogen which changes with the surrounding conditions such as pressure, for example a supergiant star 
@@ -122,3 +122,22 @@ Hershel was an ESA mission launched in 2009 which ended in 2013 after it ran out
 3.5 metre mirror and could observe between 55-670 micrometer which is better and accurate than Spitzer. It discovered some gas and dust filaments in molecular clouds which
 were a birthplace for stellar structure. For our OB star analysis, the data can help us determine a relationship how massive stars interact with their birthclouds like how earlier stars
 lie near warmer dust.
+
+---------
+
+07-10-26 T22:30  
+## Galactic Latitude  
+Galactic latitude (b) is the distance of a star or any object above or below the plane of the milky way galaxy when the sun is our reference point. 
+Milky way is roughly shaped like a disk and the Galactic latitude how far the object is from the disk's central plane.
+b = 0° : object is in the direction of the galactic plane.
+b = +20° : object is above the plane.
+b = -20° : object is below the plane.
+b = ±90° : object is in the direction of galactic pole.
+
+When we used the condition < 20° we are taking the stars that are either above or below the plane , basically focus on the region only where O and B type stars are commonly found, they do have 
+bigger number but other stars such as A, F, G are also present but in small numbers. 
+
+-------------
+
+
+
