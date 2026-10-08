@@ -46,7 +46,7 @@ Ultimately, these factors force the framework to merge luminosity classes for ho
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Date 10/7/26 (Wednesday)
-### ZETA-PAYNE: a fully automated spectrum analysis algorithm for the Milky Way Mapper program of the SDSS-V survey
+### ZETA-PAYNE: a fully automated spectrum analysis algorithm for the Milky Way Mapper program of the SDSS-V survey : https://arxiv.org/pdf/2203.14538
 
 ### 1. Introduction
 While the ZETA-PAYNE algorithm was developed as a generalized classification model for all early-type (O, B, A, and F) stars, its computational framework provides a robust foundation for strictly isolating and analyzing O-type populations. 
@@ -95,14 +95,58 @@ To prevent the algorithm from getting stuck in the wrong temperature regime, ZET
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
-### A self-consistent data-driven model for determining stellar parameters from optical and near-IR spectra
+#### 10/7/26 - 10/8/26
+### A self-consistent data-driven model for determining stellar parameters from optical and near-IR spectra:https://arxiv.org/pdf/2402.05184
 
-#### 1.Introduction:
-In this paper it uses machine learning to find the steller parametets not clasifiy it from using the MK
-System in this paper it develops the counter part to APOGEE model APOGEE net to BOSS,BOSS net that data driven pipeline that uses\
-optical spectra brown
-dwarfs, as well as white dwarfs, resulting in a comprehensive coverage between 1700<Teff<100,000
-K and 0<log g<10, to ensure BOSS Net can reliably measure parameters of most of the commonly
-observed objects within this parameter space.Instead of calculating physics the author it uses the HOTPAYNE created by Xiang et al 
- it was used to calculate the $T_{\text{eff}}$, $\log g$ it also introduce quality cuts that includes 
-$T_{\text{eff}}$ precision $< 4\%$ and $\log g$ precision $< 0.2$
+#### 1. Introduction
+In this paper, the authors use machine learning to infer physical stellar parameters 
+directly from spectra, rather than classifying them using the traditional MK system. 
+Specifically, the study develops BOSS Net—a data-driven pipeline for optical spectra—
+as the counterpart to their updated near-IR model, APOGEE Net. By including a vast range of
+stellar types, from brown dwarfs to white dwarfs, the models achieve comprehensive 
+coverage across $1700 < T_{\text{eff}} < 100{,}000$ K and $0 < \log g < 10$. 
+This wide range ensures that BOSS Net can reliably measure the parameters of most commonly 
+observed objects within this space. 
+
+
+
+### 2. Methodology
+
+##### 2.1 Training Data (OBA Stars)
+For this review, we focus exclusively on the methodology applied to hot, massive OBA-type
+stars. To train the BOSS Net model, the authors utilized 128,430 LAMOST spectra and 
+only 663 BOSS spectra. This heavy reliance on LAMOST data is due to the historical 
+scarcity of high-mass OBA-type targets in legacy SDSS/BOSS surveys. 
+By importing the massive LAMOST dataset, the authors provided the neural network with 
+enough high S/N examples to properly learn the physical features of hot stars.
+
+##### 2.2 Model Architecture
+BOSS Net is a 1D residual convolutional neural network that takes the raw, un-normalized 
+star spectrum as its direct input. To regularize the network and avoid overfitting, 
+data augmentation techniques are employed during training. 
+These techniques include dropping specific flux values, 
+randomly removing continuous segments of the spectrum entirely, 
+and adding artificial Gaussian noise based on the error margin. 
+This forces the model to become highly robust at identifying true stellar properties, 
+rather than strictly depending on or memorizing camera noise within the training dataset. 
+After passing through multiple convolutional and fully connected layers, 
+the network directly outputs the final stellar properties.
+
+### 3. Results
+The BOSS Net model demonstrates high reliability, though its precision is mathematically 
+higher for cool stars than for hot (OBA-type) stars. The typical uncertainties for 
+sources with a Signal-to-Noise Ratio (SNR) > 15 are summarized below:
+
+| Stellar Parameter | Cool Stars ($T_{\text{eff}} < 6700$ K) | Hot Stars (OBA Type) | Unit |
+| :--- | :--- | :--- | :--- |
+| **Effective Temperature ($T_{\text{eff}}$)** | 0.007 | 0.02 | dex |
+| **Surface Gravity ($\log g$)** | 0.09 | 0.13 | dex |
+| **Metallicity ([Fe/H])** | 0.07 | 0.16 | dex |
+| **Radial Velocity (RV)** | 7.0 | 12.5 | km/s |
+
+### 4. Key Contributions
+* **Direct Inference:** rather than using iteratively generate synthetic, computerized spectra to fit the data, BOSS Net takes a raw input spectrum and directly calculates the stellar outputs in a single forward pass.
+* **Broad Scope:** The pipeline successfully maps a massive parameter space, applying a single data-driven model to a vast spectrum of star types.
+
+### 5. Limitations
+* **Lower Precision on Hot Stars:** BOSS Net is less accurate for hot stars compared to cool stars. Because hot OBA atmospheres lack the dense forests of molecular and neutral metal absorption lines found in cooler stars, the network has fewer anchor points to read. Consequently, the uncertainties in $T_{\text{eff}}$ and $\log g$ are significantly larger for hot stars.
