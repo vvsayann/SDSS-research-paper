@@ -33,4 +33,6 @@ Read 1 paper which ill log later along with the current paper im reading which i
 
 -------------
 
-
+08-10-2026  
+Logged two new papers, one which focused on OB star and narrowed them using galactic latitude and took data from LAMOST
+while the other took data From HERMES and focused on B type stars more. 

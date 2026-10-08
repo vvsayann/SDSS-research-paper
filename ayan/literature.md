@@ -189,7 +189,7 @@ The brackett linear relation becames unreliable to stars later than A0 and emiss
 
 ----------------------
 
-04-10-26 T22:33  
+    04-10-26 T22:33  
 
 **Read Hanson_1998**  
 https://iopscience.iop.org/article/10.1086/300556/pdf  
@@ -282,7 +282,7 @@ compared to machine accuracy. Metal features which are sensitive due to luminosi
 08-10-2026 T16:15  
 **Read arXiv:2110.10669**  
 https://arxiv.org/pdf/2110.10669  
-older B star classifcation standards had inconsistend labels and the reference stars that were used were unsuitable and with time the classifcation needed an upgrade. The authors revised the grid and updated the criteria 
+older B star classification standards had inconsistent labels and the reference stars that were used were unsuitable and with time the classifcation needed an upgrade. The authors revised the grid and updated the criteria 
 for the classification in order to the modern spectra. A standard star is used as a reference star whose spectrum defines the whole classification process. A standard star should be a single star not binary as the combined spectrum
 can cause misleading result in other star classification. 
 
@@ -299,7 +299,7 @@ obtain the surface pressure, broader lines mean greater pressure, By obtaining s
 **Key-results:** The new grid is more consistent, they authors found out that subtypes such as B6 and B7 were not needed at that resolution and they also demonstarated that stellar rotation influences spectral line measurements. Their big work is that
 the grid is now more consistent to the actual physical characteristic of B-type stars especially surface gravity and luminosity which wasn't the case in the old grid system. However, this does not mean that this new grid system can find / calculate any
 physical property of the star, it just means it gives consistent measurements of those properties.  
-**Drawbacks:**  The revised grid has drastic improvement but it has some limitations:
+**Drawbacks:**  The revised grid has drastic improvement, but it has some limitations:
 1. Balmer wings are less effective when we want to determine the luminosity for hottest B type stars.
 2. Stellar winds [stellar-winds](./theory.md#stellar-winds) mess up the spectra of bright supergiant. 
 3. some luminosity classes are still difficult to distinguish as the difference gap between them is very small. 
