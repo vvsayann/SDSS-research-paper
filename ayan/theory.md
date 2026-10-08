@@ -65,7 +65,7 @@ it was used so that the luminosity classification was making physical sense with
 
 02-10-26 T20:48
 ## Luminosity Criteria  
-**FOR arXiv:2407.04163**  
+**For arXiv:2407.04163**  
 The main criteria for luminosity the paper (2407.04163) is the width of wings of H balmer absorption lines especially H-Alpha. Keeping the spectral 
 subtype same, main sequence stars have a higher surface gravity and broader wings, where as giants and supergiants have comparatively low surface gravity
 and the wings are narrower as well. The authors assign the class by comparing these profiles for standard stars. This criterion works best for B2 or later type as 
@@ -87,10 +87,11 @@ criterion unreliable for them.
 ## Stellar winds
 
 Stellar winds are the streams of gas flowing outwards from the surface of the star into the space.  
-**How it affects our classification method:**  For very bright B type supergiants, these winds are very strong. Since the paper's
+For very bright B type supergiants, these winds are very strong. Since the paper's
 method tries to estime the luminosity class using width and shape of balmer line as they depend on the star's surface gravity,
 but in case of very luminous supergiants, strong interstellar winds can also change the Balmer line profile so the line shape also depends
-on interstellar winds along with surface, 
+on interstellar winds along with surface.
+
 -----------
 
 03-10-26 T22:15
