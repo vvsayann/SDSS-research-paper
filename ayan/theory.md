@@ -96,7 +96,7 @@ on interstellar winds along with surface.
 
 03-10-26 T22:15
 
-##Metal lines  
+## Metal lines  
 
 I've noticed that B type stars in NIR mostly have abuandance of metal lines while He I and He II are still present in some amount, however this is not
 the case for O type stars, they only have He and Si lines for the most part. 
