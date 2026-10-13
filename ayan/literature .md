@@ -357,12 +357,11 @@ A manual search for Be stars.
 | H-alpha emission catalogue matches          | Identify possible Be stars                  |
 | H-K and K-W1 infrared colours               | Separate classical and Herbig Be candidates |
 
-A total of 30,000 training/test spectra were used, split into 6 classes (B, A, F, G, K, M) and 5000 spectra per class and g-band S/N.
->= 10. The B sample is matched by LAMOST DR11 and Liu et al. (2019) with a small number of O spectra. They split the sample
+A total of 30,000 training/test spectra were used, split into 6 classes (B, A, F, G, K, M) and 5000 spectra per class and g-band S/N >= 10. The B sample is matched by LAMOST DR11 and Liu et al. (2019) with a small number of O spectra. They split the sample
 Separated into 70% training and 30% test set. The first 1800 flux values (from about 3700-5600 A) were normalized and scaled, and
 High flux outlier and short missing sections interpolated. The model was composed of three bidirectional LSTM layers and three convolutional layers.
 Two layers and a final classification output. It was used for DR11, MKCLASS and visual identification of B candidates.
-Confirmed objects were compared to the catalogues of H-alpha emission and searched for Be features. The extinction-corrected H-K and K-W1 colours.
+Confirmed objects were compared to the catalogues of H-alpha emission and searched for Be features. The extinction-corrected H-K and K-W1 colors.
 These were then used to separate the classical and Herbig Be candidates.
 **Key-results:** Test accuracy for 6 classes was 97.86% and precision and recall for B class both 99.33%. These values represent the average values across the broad spectrum.
 Classification and not direct Be identification. The model was chosen based on 55667 B candidates, with 20,037 of these being removed due to overlap with other spectra.
@@ -373,7 +372,7 @@ Be and 225 with insufficient infrared data.
 missed. The high test accuracy is not necessarily indicative of a high proportion of survey candidates since only 58.3% of new B candidates were verified.
 purity. A separate final untouched test set and separation of repeat observations by unique star are not clearly described, creating,
 possible evaluation concerns. The uncertainty is inherited from the previous catalogue, and transfer to other surveys was not
-demonstrated. The subclasses of infrared colours are uncertain because they are based on extinction and distance estimates. The paper also includes 4512.Also 4512 are listed in the paper.
+demonstrated. The subclasses of infrared colors are uncertain because they are based on extinction and distance estimates. The paper also includes 4512.Also 4512 are listed in the paper.
 one table heading where its infrared categories add up to 4511.
 
 -----------------------
