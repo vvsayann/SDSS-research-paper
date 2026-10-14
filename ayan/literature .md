@@ -189,7 +189,7 @@ The brackett linear relation becames unreliable to stars later than A0 and emiss
 
 ----------------------
 
-    04-10-26 T22:33  
+04-10-26 T22:33  
 
 **Read Hanson_1998**  
 https://iopscience.iop.org/article/10.1086/300556/pdf  
@@ -336,7 +336,7 @@ gravity effects. The Atlas was observed at R ~ 3000, but the authors proposed th
 classification applications.  
 **Drawbacks:** The grid is available with 85 standards, the average chemical composition of which is approximately solar in metal-poor,
 Spectrum of peculiar or composite spectra. Many early type grid cells have been lost and O/B stars have less useful H band features, so the
-The whole O7-M5 range must not be considered as two-subclass precision. Not all neighbouring indices are clearly distinguished by the indices.
+The whole O7-M5 range must not be considered as two-subclass precision. Not all neighboring indices are clearly distinguished by the indices.
 luminosity class. The ratios are based on a smooth excess continuum and may be influenced by emission or blends. Atmospheric residuals and
 Weak lines are also difficult to measure in OH airglow with R ~ 5000 probably required for very faint objects.
 
@@ -376,4 +376,7 @@ demonstrated. The subclasses of infrared colors are uncertain because they are b
 one table heading where its infrared categories add up to 4511.
 
 -----------------------
+
+
+
 
