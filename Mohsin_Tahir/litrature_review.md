@@ -92,7 +92,20 @@ To prevent the algorithm from getting stuck in the wrong temperature regime, ZET
 #### Limitations:
 - The neural network models only based on what it knows from its training grid; if there is an extreme high-temperature O-type star that falls outside its limits, it will not fit it correctly.
 - There are massive upfront computational costs to generate the physical grid and train the neural network.
+### Results:
+mportantly, the current model's quantitative results cap at an effective t
+emperature of $25{,}000$ K (early B-type). Because the neural network was trained on synthetic grids generated
+under the assumption of Local Thermodynamic Equilibrium (LTE), it cannot accurately classify true O-type stars
+($T_{\text{eff}} > 25{,}000$ K). At these extreme temperatures, intense UV radiation fields and strong stellar
+winds cause LTE approximations to completely break down. Therefore, future expansion of the pipeline to classify
+O-type populations will require generating complex, 
+computationally expensive non-LTE (NLTE) grids to account for this physics.
 
+### Model availaiblity:
+while the zeta pipeline is not present you can download the payne base model and train it yourself The Payne is open-source software released under the MIT License.
+- link: https://github.com/pacargile/ThePayne
+The code repository is publicly available on GitHub.
+- link: GitHub: hutchresearch/ZetaPayne
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 #### 10/7/26 - 10/8/26
@@ -150,3 +163,20 @@ sources with a Signal-to-Noise Ratio (SNR) > 15 are summarized below:
 
 ### 5. Limitations
 * **Lower Precision on Hot Stars:** BOSS Net is less accurate for hot stars compared to cool stars. Because hot OBA atmospheres lack the dense forests of molecular and neutral metal absorption lines found in cooler stars, the network has fewer anchor points to read. Consequently, the uncertainties in $T_{\text{eff}}$ and $\log g$ are significantly larger for hot stars.
+
+### BOSS Net availability:
+while the standalone BOSS Net pipeline is not present as a simple download, you can access its pre-computed stellar parameters directly through the public SDSS Data Releases. The broader SDSS pipeline codebase is open-source software hosted on GitHub.
+
+- link: https://github.com/sdss
+- The model and its trained weights are available as a standalone archived release on Zenodo (with weights up to v2.0.0 as of January 2025).
+- link: Zenodo: hutchresearch/BOSSNet
+
+### APOGEE Net availability:
+while the official APOGEE Net pipeline is integrated directly into SDSS DR17 data processing, you can query the pre-calculated results for millions of stars from the public SDSS catalog. Additionally, the original APOGEENet neural network model by the authors is available as open-source software.
+
+- link: https://github.com/dsprague/APOGEENet (Original Base Model)
+ 
+- link: https://github.com/sdss (Official SDSS Pipeline & Catalogs)
+
+The code repository is publicly available on GitHub.
+- link: GitHub: hutchresearch/ApogeeNet2
