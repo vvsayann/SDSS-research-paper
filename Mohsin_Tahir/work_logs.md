@@ -23,3 +23,6 @@ and reviewed (Roman-Lopes et al. 2024)
 
 10/9/26
 - read reviewed https://arxiv.org/pdf/2402.05184 and created a python script "Ar_e_r_Extraction.py" for extracting specific parameters
+
+10/15/26
+- added links to the models and added "RESULTS" Section in ZETA-PAYNE paper
