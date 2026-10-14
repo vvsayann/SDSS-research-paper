@@ -8,7 +8,7 @@ from astropy.io import fits
 
 # Folder to scan. You can also pass a different folder on the command line:
 #     python export_sn_csv.py "D:\\other\\folder"
-DEFAULT_FOLDER = r"C:\Users\yoboy\Desktop\SDSS-research-paper-\Spectrum"
+DEFAULT_FOLDER = r"C:\Users\yoboy\Desktop\SDSS-research-paper\Spectrum"
 FOLDER = Path(sys.argv[1] if len(sys.argv) > 1 else DEFAULT_FOLDER)
 OUT_CSV = FOLDER / "sn_values.csv"
 
