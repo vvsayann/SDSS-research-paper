@@ -54,3 +54,47 @@ try:
 
 except Exception as e:
     print(f"An error occurred: {e}")
+```
+--------------------------------------------------------------------------------------------------------------------------
+#### 10/15/26
+
+## Trust Region Reflective Alghorithm:
+
+TRR (Trust Region Reflective) is a step-by-step optimization algorithm used to find the best parameters that minimize an error. It is especially useful when those parameters have allowed limits, like a temperature that must stay between certain values.
+
+## How it works
+
+1. **Start at an initial guess.**  
+   The algorithm begins with some set of parameters.
+
+2. **Build a simple local model.**  
+   Around that guess, it makes a simplified mathematical picture of how the error changes nearby.
+
+3. **Choose a trust region.**  
+   It draws a small neighborhood around the current point. Inside this neighborhood, it trusts the simple model to be reasonably accurate.
+
+4. **Solve the trust-region subproblem.**  
+   It asks: “Within this small neighborhood, what step gives the best improvement according to the simple model?”
+
+5. **Propose a new point.**  
+   That best step gives a candidate new set of parameters.
+
+6. **Handle bounds reflectively.**  
+   If the step would go outside the allowed limits, the algorithm reflects it off the boundary instead of just cutting it off. This lets it slide along the edge and still move toward a good answer.
+
+7. **Test the new point.**  
+   It calculates the real error at the proposed new point.
+
+8. **Compare actual vs. predicted improvement.**
+   - If the real error improved about as much as the model predicted, the step is **accepted**, and the trust region may be **expanded**.
+   - If the real error did not improve as predicted, the step is **rejected**, and the trust region is **shrunk**.
+
+9. **Repeat.**  
+   It keeps doing this loop: build model, choose region, solve subproblem, test, accept or reject, adjust region size.
+
+10. **Stop when done.**  
+    It stops when the step becomes very small, the error is low enough, or another stopping condition is met.
+
+## The main weakness
+
+Because TRR only looks at the nearby neighborhood, it can get stuck in a **local minimum** — a spot that looks good locally but is not the best overall answer.

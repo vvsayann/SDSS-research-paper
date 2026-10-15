@@ -180,3 +180,57 @@ while the official APOGEE Net pipeline is integrated directly into SDSS DR17 dat
 
 The code repository is publicly available on GitHub.
 - link: GitHub: hutchresearch/ApogeeNet2
+
+----------------------------------------------------------------------------------------------------------------
+#### 10/15/26(thursday)
+### Stellar labels for hot stars from low-resolution spectra – I. the HotPayne method and results for 330, 000 stars from LAMOST DR6  https://arxiv.org/pdf/2108.02878
+
+#### 1. Introductions:
+n this paper, the authors develop the HotPayne model specifically to classify hot stars (OBA type), 
+as it is very difficult to classify them rather than cool stars due to weak metallic lines 
+and rapid rotation.   To solve this, synthetic spectra generated from the Kurucz software under 
+Local Thermodynamic Equilibrium (LTE) assumptions are used to train the HotPayne model. 
+Once trained, it is applied to LAMOST survey spectra to simultaneously classify 11 labels, 
+such as $T_{\text{eff}}$, $\log g$, $v \sin i$, metallicity, and chemical compositions like Si and C. 
+Ultimately,
+this method allowed them to extract parameters for over 330,000 hot stars.
+
+#### 2. Methodology:
+
+
+##### 2.1 Synthetic Generation
+
+To create the training data, the authors generated a library of 10,127 synthetic spectra from first principles using the Kurucz software (`ATLAS12` for atmospheric structure and `SYNTHE` for radiative transfer). These physical models were computed entirely under LTE assumptions. sine the spectra has ultra high resolving power R= 500,00 To make the theoretical models look like real LAMOST observations they degraded the resolution to match the exact Line Spread Function (LSF) of the LAMOST spectrographs.
+
+##### 2.2 HotPayne Model Training
+
+
+ The network uses 17 input parameters (the 11 physical stellar labels plus 6 polynomial coefficients describing the telescope's LSF). The data passes through two hidden layers, each containing exactly 100 neurons, using a Sigmoid activation function.
+
+then it is Built in PyTorch and optimized using the ADAM algorithm, the network was trained on 9,115 Kurucz spectra and validated on a hidden set of 1,012 test spectra.
+
+then The trained neural network performed exceptionally well, predicting the synthetic flux with an average error of just 0.165% across the spectrum, proving it successfully learned the Kurucz physics.
+
+##### 2.3 Spectral Fitting and Masking
+
+Once fully trained, the HotPayne model is applied to the real LAMOST DR6 spectra to find the best fit for all 11 labels simultaneously via $\chi^2$ minimization. During fitting, they masked out bad data like telluric bands and interstellar absorption.
+A critical adjustment was required for early A-type stars ($T_{\text{eff}} \sim 9500\text{ K}$). At this temperature, Hydrogen lines reach their maximum strength, causing the spectral gradients to reverse. This tricked the model and created an artificial "desert" of stars in their graphs. To resolve this, they completely masked the Hydrogen lines when fitting early A-type stars.
+
+## 3. Key Contributions
+
+- It successfully extracts highly precise information from low-resolution optical spectra, allowing for the simultaneous fitting of 11 stellar labels.
+
+- It represents the first massive-scale classification of hot stars, expanding the sample size by two orders of magnitude to over 330,000 OBA star.
+
+- It proves that automated neural networks can accurately measure complex kinematic parameters like projected rotational velocity ($v \sin i$) and microturbulent velocity ($v_{\text{mic}}$) directly from heavily blended spectral features.
+
+## 4. Limitations 
+
+- The most significant limitation is its reliance on LTE assumptions. For very hot stars ($T_{\text{eff}} > 25,000\text{ K}$) , LTE physics completely breaks down due to intense UV radiation and stellar winds dictating the atomic states (NLTE effects).
+
+- Because of this LTE failure, HotPayne suffers from severe systematic errors on hot stars: it underestimates $T_{\text{eff}}$ by up to $3,000\text{ K}$, overestimates surface gravity ($\log g$), and inflates Helium and microturbulence abundances to artificially compensate for deeper NLTE spectral lines.
+
+- The model assumes single, static stars, meaning it struggles to accurately classify binary star systems or O/B stars that exhibit emission lines.
+
+## Model availaibility:
+there is no Hotpayne model availaible for public but we can recreate it ourself using the base Payne model wiht out own liking
