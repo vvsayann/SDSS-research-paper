@@ -194,7 +194,7 @@ The brackett linear relation becames unreliable to stars later than A0 and emiss
 
 ----------------------
 
-    04-10-26 T22:33  
+04-10-26 T22:33  
 
 **Read Hanson_1998**  
 https://iopscience.iop.org/article/10.1086/300556/pdf  
@@ -313,26 +313,74 @@ physical property of the star, it just means it gives consistent measurements of
 
 -----------------------
 
+10-10-2026  T16:25
+**Read Meyer et al. (1998, arXiv:astro-ph/9808206)**  
+https://arxiv.org/pdf/astro-ph/9808206  
+Stars obscured by dust are more difficult to classify optically and warm dust obscuring a star can mimic the spectrum of the star.
+Infrared, K band. Authors looked into the possibility of obtaining temperature and luminosity data from the H band and created an atlas.
+With the use of known MK standard stars.
+
+| Spectral feature             | Purpose                                             |
+|------------------------------|-----------------------------------------------------|
+| Hydrogen Brackett absorption | Temperature information, strongest near A types     |
+| Neutral metal lines          | Help distinguish cooler spectral types              |
+| OH/Mg I EW ratio             | Temperature and gravity information for K3-M5 stars |
+| Combined CO/Mg I EW ratio    | Separate late-type dwarf and giant sequences        |
+
+The authors observed 85 stars between spectral types O7 and M5 and luminosity classes I-V, which are approximately solar-abundance stars, with the Fourier-transform
+We will use the KPNO Mayall 4m Telescope's spectrometer. The spectra covered approximately 1.55-1.75 um at R ~ 3000. They selected mainly
+Set up optical MK standards and rejected stars with strong abundance peculiarities or close visual companions. Only 53 of the 78
+Standards were proposed for temp/luminosity bins, and there was excellent coverage for G0 and later stars. They recorded nine narrow-band
+The EW indices included one of the hydrogen features, five of the neutral-metal features and three of the molecular features. They have compared for K3-M5 stars.
+The ratios of the OI lines and combined COI lines to Mg I lines. When the added dust continuum changes in a small manner, these ratios can help to minimize the impact of the added dust continuum.
+Averaged over the appropriate wavelengths.  
+**Key-results:** The usefulness of the H-band spectra lies in the fact that they contain classification information, but the most well-calibrated ratios were for cooler K3-M5 stars. These could
+For S/N > 50, a precision of ~ two spectral subclasses or ~ 300K is offered. A molecular absorption was around 1%.
+When at the same temperature, is 2 times as strong in giants as in dwarfs. Comparisons of both molecular/metal ratios facilitated the separation of the temperature and
+gravity effects. The Atlas was observed at R ~ 3000, but the authors proposed that R ~ 1000 might be good enough for many.
+classification applications.  
+**Drawbacks:** The grid is available with 85 standards, the average chemical composition of which is approximately solar in metal-poor,
+Spectrum of peculiar or composite spectra. Many early type grid cells have been lost and O/B stars have less useful H band features, so the
+The whole O7-M5 range must not be considered as two-subclass precision. Not all neighboring indices are clearly distinguished by the indices.
+luminosity class. The ratios are based on a smooth excess continuum and may be influenced by emission or blends. Atmospheric residuals and
+Weak lines are also difficult to measure in OH airglow with R ~ 5000 probably required for very faint objects.
+
+-----------------------
 
 
+12-10-2026  T20:05  
+**Read arXiv:2511.02221**    
+https://arxiv.org/pdf/2511.02221  
+The emission lines of Be stars can vary in strength and form, so that they are hard to find in large surveys. Authors
+used deep learning to pick B-type spectra from LAMOST DR11 and integrated them with the existing H-alpha emission catalogues.
+A manual search for Be stars.
 
+| Feature / method                            | Purpose                                     |
+|---------------------------------------------|---------------------------------------------|
+| Blue optical spectrum, 3700-5600 A          | Identify broad stellar spectral classes     |
+| Bidirectional LSTM and convolutional layers | Learn patterns from the normalized spectra  |
+| H-alpha emission catalogue matches          | Identify possible Be stars                  |
+| H-K and K-W1 infrared colours               | Separate classical and Herbig Be candidates |
 
+A total of 30,000 training/test spectra were used, split into 6 classes (B, A, F, G, K, M) and 5000 spectra per class and g-band S/N >= 10. The B sample is matched by LAMOST DR11 and Liu et al. (2019) with a small number of O spectra. They split the sample
+Separated into 70% training and 30% test set. The first 1800 flux values (from about 3700-5600 A) were normalized and scaled, and
+High flux outlier and short missing sections interpolated. The model was composed of three bidirectional LSTM layers and three convolutional layers.
+Two layers and a final classification output. It was used for DR11, MKCLASS and visual identification of B candidates.
+Confirmed objects were compared to the catalogues of H-alpha emission and searched for Be features. The extinction-corrected H-K and K-W1 colors.
+These were then used to separate the classical and Herbig Be candidates.
+**Key-results:** Test accuracy for 6 classes was 97.86% and precision and recall for B class both 99.33%. These values represent the average values across the broad spectrum.
+Classification and not direct Be identification. The model was chosen based on 55667 B candidates, with 20,037 of these being removed due to overlap with other spectra.
+40,223 B-type spectra were received of which 20,186 were confirmed, a figure of 34,630 new candidates. The authors claimed 8298 Be stars,
+Which comprises 4511 new discovered objects. The sample size of each subset of the new data is listed below.The number of stars in each subset of the new sample is given as follows: classical Be, 3363; Herbig Be, 35; mixed, 870; possible Herbig, 18.
+Be and 225 with insufficient infrared data.
+**Drawbacks:** Despite this, weak or variable emission objects might need to be identified manually and using emission catalogues; be identification is still required.
+missed. The high test accuracy is not necessarily indicative of a high proportion of survey candidates since only 58.3% of new B candidates were verified.
+purity. A separate final untouched test set and separation of repeat observations by unique star are not clearly described, creating,
+possible evaluation concerns. The uncertainty is inherited from the previous catalogue, and transfer to other surveys was not
+demonstrated. The subclasses of infrared colors are uncertain because they are based on extinction and distance estimates. The paper also includes 4512.Also 4512 are listed in the paper.
+one table heading where its infrared categories add up to 4511.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-----------------------
 
 
 

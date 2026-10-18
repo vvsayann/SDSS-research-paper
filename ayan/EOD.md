@@ -36,3 +36,18 @@ Read 1 paper which ill log later along with the current paper im reading which i
 08-10-2026  
 Logged two new papers, one which focused on OB star and narrowed them using galactic latitude and took data from LAMOST
 while the other took data From HERMES and focused on B type stars more. 
+
+------------
+
+09-10-2026
+Read two new papers which I will log tomorrow, reading more papers as well along with key findings which ill make a new md file for.
+
+-------------
+10-10-2026
+Logged a paper on IR using MKCLASS procedure.
+
+------------
+
+12-10-2026
+Logged another paper which took data form LAMOST and trained a dataset on the data obtained.
+
