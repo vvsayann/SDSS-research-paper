@@ -117,7 +117,7 @@ He I / Mg II line ratio so older methods might work well for some stars.
 
 **Drawbacks:** Some classes such as II, IV don't have good standard stars so they are harder to classify properly, This method also does not work
 that accurately for stars earlier than B2 and for very bright supergiants because their stellar winds can affect the spectral lines.
-This method is mainly designed for stars which have abuandace of metal lines similar to that of our sun which are at higher temperature so this might
+This method is mainly designed for stars which have abundance of metal lines similar to that of our sun which are at higher temperature so this might
 not be reliable as temperature varies a lot. check [Stellar](./theory.md#Stellar-winds)  
 Finally this method has to be done with careful / picked parameters such as the spectra picked, on top of that it has to be done manually by experts,
 it is not a computer based automation yet so it takes a long amount of time and can have a far greater possible error %.
@@ -125,6 +125,11 @@ it is not a computer based automation yet so it takes a long amount of time and 
 
 
 ---------------------
+
+10-10-26 T22:47  
+**Read **
+
+
 
 28-09-26 T18:20  
 **Read arXiv:2003.09469v1**  
@@ -218,7 +223,7 @@ They followed these set of instructions for classification of dwarfs
 | Br11 , with He I                  | B2–B3                    |
 | Br11  , without detected He I     | Late B to early A        |
 
-These are broad guides and they weren't limited to this, but they followed these roughly. The authors suggested a precision of ~ two to three spectral subclasses when luminosity is known.
+These are broad guides, and they weren't limited to this, but they followed these roughly. The authors suggested a precision of ~ two to three spectral subclasses when luminosity is known.
 The Br11/He I ratio is generally larger in early/mid B dwarfs than in supergiants of the same type.
 They also recommended S/N > 100 , R ~ 2000 or higher and comparison standards observed similar resolutions.  
 **Drawbacks:** The 34 star sample is too small to make this as a reliable benchmarking guide that can be used for any sample. Temperature and luminosity are independent
@@ -233,7 +238,7 @@ luminosity effect needs a larger star sample.
 **Read arXiv:1902.07607**  
 https://arxiv.org/pdf/1902.07607  
 OB stars play an important rule for the studying of the milky way's structure, composition chemically and the stellar evolution but the catalogues prior to this method contained bright objects nearby 
-the target stars. The catalogues were missing B stars, so the authors decided to develop a new catalogue using LAMOST DR5 and targetted the outer arms of the galaxy and tried testing that wheter MK class can 
+the target stars. The catalogues were missing B stars, so the authors decided to develop a new catalogue using LAMOST DR5 and targeted the outer arms of the galaxy and tried testing that whether MK class can 
 assign spectral subtype and luminosity classes to these stars with accuracy or no. 
 
 | Spectral line                                                              | Purpose                                                                                                                         |
@@ -257,7 +262,7 @@ Their first criteria was
 This gave them around 160,000 candidate spectra which can be used for their process later on. They rejected the spectra which contained strong Fe absorption lines which resulted in spectra getting narrowed down to 
 12200 approximately, These were inspected using H, He and metal features. Their spectra were checked manually by different people so error % could be shortened down. Spectra which did not have He features were exempted. 
 For further detail classification, they chose 22,000 OB star spectra using MKCLASS. This automation compares spectra using MK standards and degraded the template from 1.8Å to 2.8Å resolution which was according to the LAMOST 
-blue spectrum resolution. They tested this method using randomly selected spectra of around 5000 using a S/N > 15 and Galactic latitude < 20° [Galactic-Latitude](./theory.md#galactic-latitude-)cap. They double checked this with classification of 1000 OB spectra out of which 
+blue spectrum resolution. They tested this method using randomly selected spectra of around 5000 using a S/N > 15 and Galactic latitude < 20° [Galactic-Latitude](./theory.md#galactic-latitude-) cap. They double-checked this with classification of 1000 OB spectra out of which 
 646 had meaningful MKCLASS output rated good or better which was used as accuracy comparison for their own results.
 
 **Key-results:** The catalogue contains:
@@ -270,7 +275,7 @@ blue spectrum resolution. They tested this method using randomly selected spectr
 | White dwarfs    | 160 spectra of 127 stars       | 
 
 The catalogue has around 22,900 spectra of 16,000 stars, but it also has subdwarfs and white dwarfs. The normal OB stars consist of total ~ 15,000 stars out of which 91 are O stars and rest are B stars. 
-This method intially classified about 89 (22%) of stars earlier than B7 but later on this dropped to 57 (16% ) for B8 and B9 as their luminosity is very close to that of early A type stars. For spectra of good quality, MKCLASS
+This method initially classified about 89 (22%) of stars earlier than B7 but later on this dropped to 57 (16% ) for B8 and B9 as their luminosity is very close to that of early A type stars. For spectra of good quality, MKCLASS
 gave results very close to manual classification.  
 **Drawbacks:** Out of the 15,000 OB star spectra, around ~ 6500 (43%) got failed MKCLASS output and some classifications were wrong physically. This method applies to selected subset rather than being automated
 for any type of spectra. The template cannot classify stars earlier than O9 with good accuracy due to abundance of metal lines, rotation, emission and the data quality (spectra) obtained along with weak spectral lines due to luminosity. 
@@ -294,7 +299,7 @@ can cause misleading result in other star classification.
 | He I/Mg II ratios       | Later-B temperature classification   |
 
 The authors obtained multiple spectra at R ~ 85,000 from HERMES, removed spectras that would cause problems later on such as the ones obtained from double-lined binaries and Be stars. They tok 157 reference stars. They dropped the resolution to 
-~ 4000 and classified using comparison. They also used gaia distances [gaia-distance](./theory.md#gaia-distance-) to help making the grid. They obtained the temperature information using ratios between different silicon lines. Hydrogen lines to
+~ 4000 and classified using comparison. They also used gaia distances [gaia distance](./theory.md#gaia-distance-) to help making the grid. They obtained the temperature information using ratios between different silicon lines. Hydrogen lines to
 obtain the surface pressure, broader lines mean greater pressure, By obtaining surface gravity they could easily distuingish between luminosity classes. Hence, temperature and surface gravity are considered together.  
 **Key-results:** The new grid is more consistent, they authors found out that subtypes such as B6 and B7 were not needed at that resolution and they also demonstarated that stellar rotation influences spectral line measurements. Their big work is that
 the grid is now more consistent to the actual physical characteristic of B-type stars especially surface gravity and luminosity which wasn't the case in the old grid system. However, this does not mean that this new grid system can find / calculate any
