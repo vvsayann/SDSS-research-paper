@@ -29,3 +29,6 @@ and reviewed (Roman-Lopes et al. 2024)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 10/16/26
 -read and reviewd  https://arxiv.org/pdf/2108.02878 and added output folder for explaining code output in that folder i added error_extraction.md to explaint he error extraction code and also added theory for trust region reflective alghorithim
+
+
+10/22/26 read and reviewed https://arxiv.org/pdf/2110.10669 and https://doi.org/10.3389/fspas.2021.634328

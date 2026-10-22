@@ -234,3 +234,166 @@ A critical adjustment was required for early A-type stars ($T_{\text{eff}} \sim 
 
 ## Model availaibility:
 there is no Hotpayne model availaible for public but we can recreate it ourself using the base Payne model wiht out own liking
+
+
+--------------------------------------------------------------------------------------------------------
+#### 10/22/26 (thursday)
+### Spectra Recognition Model for O-type Stars Based on Data Augmentation https://doi.org/10.3389/fspas.2021.634328
+
+#### 1. Introduction:
+
+In this paper, the authors develop the LCGAN model to automatically identify rare O-type stars from the LAMOST 
+telescope survey. Because O-type stars make up less than 1% of the survey compared to millions of 
+cooler F, G, and K stars, standard neural networks fail to recognize them due to a lack of training
+examples. To solve this scarcity problem, the authors use a generative network to create 10,000 synthetic 
+O-type spectra from just 150 real O-type spectra. These synthetic O-type spectra are then combined with 
+real F, G, and K star spectra to train a deep classification model that can accurately find real 
+O-type stars in large surveys.
+
+#### 2. Methodology:
+
+##### 2.1 Data Preprocessing
+
+The authors collect low-resolution spectra ($R \sim 1800$) covering wavelengths from 3,690 to 9,100 Angstroms
+from the LAMOST dataset, including 323 real O-type stars and 10,000 stars each for F, G, and K types. 
+Because stars are at different distances, their overall brightness varies wildly and can confuse the c
+omputer. To fix this, the authors scale every spectrum so its brightness values sit between 0 and 1, 
+ensuring the model only looks at spectral line shapes rather than raw brightness.
+
+##### 2.2 Synthetic Data Generation with LCGAN
+
+To fix the shortage of O-type stars, the authors train the LCGAN model on 150 real O-type spectra to generate 
+10,000 synthetic O-type spectra. The model works as a  between a generator that draws fake spectra from 
+random noise and a discriminator that tries to spot the fakes until the generated spectra look completely 
+real. 
+
+
+##### 2.3 O-type Star Classification Model
+
+Once the 10,000 synthetic O-type spectra are generated, they are mixed with 10,000 real F, 10,000 real G, and 
+10,000 real K spectra to create a balanced training set of 40,000 stars. This balanced dataset is used to 
+train a classification network that learns to distinguish O-type stars from the cooler stars.
+The classifier model that is based on RAC-net uses an attention mechanism that focuses on the 
+specific wavelength bands containing key 
+O-type star features while ignoring noisy atmospheric bands, alongside shortcut connections that keep the 
+deep network stable during training.
+
+## 3. Key Contributions
+
+- It solves the extreme shortage of O-type stars in astronomical surveys by generating realistic synthetic 
+spectra.
+
+- It combines synthetic data augmentation with an attention-based classifier that automatically focuses on 
+the most informative wavelength regions while filtering out background noise.
+
+## 4. Limitations
+
+- The generator just copies the overall shape of real spectra without 
+understanding the actual astrophysics behind the absorption lines.
+
+- If the generator is trained for too long, it can suffer from mode collapse, meaning it gets stuck producing 
+the same few spectra repeatedly and causes the classification accuracy to fluctuate.
+
+- The model only classifies a star generally as an O-type star against F, G, and K stars, rather than breaking
+O-type stars down into finer subtypes or measuring physical 
+parameters like temperature and luminosity.
+
+## 5. Results
+
+First, the authors tested the quality of the 10,000 synthetic O-type spectra against an older generative model
+called SGAN. Their LCGAN model achieved a realism score (GAN-test) of 95.48%, beating SGAN by 12.35%, and a 
+variety score (GAN-train) of 91.50%, proving that the synthetic spectra are both realistic and diverse.
+Next, after training the final classifier on the 40,000 balanced spectra (synthetic O-type plus real F, G, and 
+K stars), they tested it on 323 real O-type spectra from LAMOST. The classifier achieved a 93.67% recognition
+accuracy on real O-type stars, which is 8.66% higher than training the same classifier without synthetic data
+(85.1%) and 3.31% higher than using SGAN. However, the authors noted that training the generator 
+beyond 1,200 iterations caused minor accuracy oscillations due to the generator occasionally repeating 
+similar spectra.
+
+## Model Availability:
+Neither the LCGAN model nor the O-type Spectra Recognition Model is publicly available to download, and 
+only the raw LAMOST DR7 and DR8 spectra are provided online. However, we can recreate both models ourselves 
+in Python using 
+Keras by following the layer diagrams and training parameters given in the paper.
+
+
+
+
+#### 10/24/26 (saturday)
+### A new automated tool for the spectral classification of OB stars https://doi.org/10.1051/0004-6361/202142491[cite: 13]
+
+#### 1. Introduction:
+
+In this paper, the authors develop an automated machine learning tool using the Random Forest algorithm to 
+classify OB-type stars into 11 sub-types ranging from O2 to B9. Traditional visual classification is 
+subjective and unable to keep pace with massive spectroscopic surveys like LAMOST, GOSSS, 2dF, and VFTS
+.To solve this, the authors build a robust classifier based on equivalent width measurements of 
+17 non-Balmer spectral lines that works independently of luminosity class and across varying metallicities
+.
+
+#### 2. Methodology:
+
+##### 2.1 Spectroscopic Data and Quality Filtering
+
+The authors compile a multi-survey training dataset containing 5,329 high-quality spectra from Galactic 
+and Magellanic Cloud surveys (LAMOST, GOSSS, 2dF, VFTS) covering different metallicities. 
+To ensure reliable line measurements, they filter out all spectra with a signal-to-noise ratio below 50 ($S/N > 50$). 
+They also group 32 detailed spectral sub-types into 11 broad adaptive binned classes 
+($\text{O2-O6}$ through $\text{B9}$) to ensure adequate training samples per class.
+
+##### 2.2 Equivalent Width (EW) Feature Extraction
+
+ the authors quantify line intensities by measuring the equivalent width (EW) of 17 characteristic 
+ non-Balmer spectral lines—primarily Helium ($\text{He I}, \text{He II}$) and metal lines 
+ ($\text{Mg II}, \text{Si III}$, etc.)—using Gaussian profile fitting. Non-detections or 
+ failed fits are handled using designated constant to retain valuable diagnostic 
+ information without discarding incomplete spectra.
+
+##### 2.3 Machine Learning Classifiers and Augmentation
+
+The core classification uses the supervised Random Forest (RF) algorithm, complemented by Probabilistic Random
+Forest (PRF) to account for measurement errors and a novel KDE-RF method. The KDE-RF method applies 
+Kernel Density Estimation to simulate 11,000 balanced mock training objects, smoothing sparsely sampled 
+feature spaces and resolving class imbalance. Sequential feature selection confirms that all 17 
+spectral lines are necessary to maximize classification performance across different sub-types.
+
+## 3. Key Contributions
+
+- It introduces a specialized automated classifier for OB stars that completely bypasses 
+variable Hydrogen Balmer lines, avoiding false classifications caused by circumstellar disks.
+
+- It successfully combines multi-survey data from different telescopes across multiple metallicities 
+(Galaxy, LMC, SMC), making the model widely applicable to diverse galactic environments.
+
+- It develops and evaluates three distinct Random Forest implementations—including 
+the novel KDE-RF simulation method—proving that tree-based algorithms handle multi-class 
+spectral classification reliably.
+
+## 4. Limitations
+
+- The model achieves an overall accuracy ceiling of ~70%, restricted by the intrinsic physical scatter of 
+equivalent width distributions within adjacent spectral classes rather 
+than measurement errors.
+
+- The classifier performs broad sub-type bucket classification (11 classes) rather then finding steller
+parameters
+
+## 5. Results
+
+When evaluated on a 30% test set (1,599 stars), the standard RF, PRF, and KDE-RF models all achieved a 
+consistent overall accuracy score of ~70%, with cross-validation scores confirming high stability 
+($69\text{--}70\%$). Performance metrics varied by sub-class: early O-stars ($\text{O2-O6}$)
+and late B-stars ($\text{B9}$) achieved high recall scores ($>0.97$ and $0.67\text{--}0.72$ respectively), 
+whereas intermediate classes like B1, B2, and B8 underperformed with F1-scores dropping to $0.42\text{--}0.61$ 
+due to natural EW overlapping. Error analysis revealed that the vast majority of misclassified objects 
+fell into immediately neighboring spectral classes, reflecting the continuous physical 
+nature of stellar temperature. When applied to blind real-world test cases 
+(328 stars from the high-resolution IACOB survey and BeXRB companion stars), 
+the model correctly matched published classifications in 66% of cases and 
+predicted adjacent classes for the remainder, proving its strong generalization 
+capability on unseen observational data.
+
+## Model Availability:
+
+The pre-processed training datasets and the complete Python code implementing the Random Forest 
+classifiers are publicly available on GitHub at `https://github.com/EliasKyritsis/SpectralClassifier.
