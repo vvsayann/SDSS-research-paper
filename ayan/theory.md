@@ -155,3 +155,12 @@ When compared at the same subtype, Balmer profiles and other features can be use
 MKCLASS can classify large samples, and may give us provisional classifications of our SDSS research.
 The manual term manual is used because O-star classification is considered to be a very basic classification, and results need visual checking.
 It is not directly designed for classification of H-band spectra, and its accuracy is not tested on our spectra.
+
+---------------
+
+## 23-10-2026 T23:51
+**LAMOST Telescope**  
+LAMOST (Large Sky Area Multi-Object Fiber spectroscopic Telescope) is a ground based telescope located in China, it is designed  to collect and analyze 
+spectra of thousands of object at the same time. It mainly covers Northern Celestial hemisphere ( δ > 0°) however some Southern Hemisphere objects are also accessible 
+but with limitation of Telescope's pointing limits. It collects data from Milky way, Hot stars (O type , B type) , Metal-poor stars , Binary stars, Quasars etc. LAMOST's target Galactic region
+coincidentally where our target stars (OB type) lie in majority and that's why we see most of the papers use LAMOST for the dataset. 
