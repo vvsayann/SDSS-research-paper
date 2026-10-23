@@ -9,7 +9,7 @@ Mainly working on B type stars**
 
 ## What I did:
 
-15-09-26    
+## 15-09-26    
 **Read arXiv:1802.01724** (NIR classification)
 https://arxiv.org/pdf/1802.01724
 - Used NIR spectra to classify stars instead of opitcal spectra.
@@ -22,7 +22,7 @@ https://arxiv.org/pdf/1802.01724
 - In NIR spectra, very few spectral lines are available that can be appropiate for this method.
 
 ---------
-17-09-26 T22:00   
+## 17-09-26 T22:00   
 **Read Kyris et al (2022, A&A 657)**
 https://www.aanda.org/articles/aa/full_html/2022/01/aa40224-20/aa40224-20.html
 - Uses Machine learning to automate classification of OB stars. 
@@ -39,7 +39,7 @@ https://www.aanda.org/articles/aa/full_html/2022/01/aa40224-20/aa40224-20.html
 - Not applicable on all OB stars, isn't valid for early B type comparatively.
 ------------
 
-19-09-26 T14:18    
+## 19-09-26 T14:18    
 **Read arXiv:2003.09469v1** (classification using NIR spectrum)
 https://arxiv.org/pdf/2003.09469v1
 - 316 B-Star data obtained from APOGEE H-Band and LAMOST optical spectra. 
@@ -54,7 +54,7 @@ https://arxiv.org/pdf/2003.09469v1
 - Br13 dispersion near 16105A also lead to confusion.
 - calibration of optical spectra with time to compare with NIR lead to data errors.
 ------------
-19-09-26 T16:10  
+## 19-09-26 T16:10  
 **Read arXiv:2609.18590** (OB stars, tree-based ML)
 https://arxiv.org/pdf/2609.18590
 - Hand-measured equivalent widths were not used, but full normalized optical spectra (12,199 flux values) were used.
@@ -88,7 +88,7 @@ Broad-band (not line-level) spectral class information. Teff already has much of
 
 ---------------
 
-27-09-26 T17:30    
+## 27-09-26 T17:30    
 **Read arXiv:2407.04163** (NIR Classifcation of B type stars)
 https://arxiv.org/pdf/2407.04163
 
@@ -126,7 +126,7 @@ it is not a computer based automation yet so it takes a long amount of time and 
 
 ---------------------
 
-28-09-26 T18:20  
+## 28-09-26 T18:20  
 **Read arXiv:2003.09469v1**  
 https://arxiv.org/pdf/2003.09469  
 Authors took 316 candidate B type stars manually selected in H Band from APOGEE (R ~ 22,500) and took optical spectra from LAMOST
@@ -158,7 +158,7 @@ spectras as well.
 
 ----------------
 
-03-10-26 T22:03  
+## 03-10-26 T22:03  
 **Read arXiv:2607.15409**  
 https://arxiv.org/pdf/2607.15409  
 B type stars have a very short amount of time in pre-main-sequence (PMS) before they get a stable core hydrogen burning. Authors found
@@ -189,7 +189,7 @@ The brackett linear relation becames unreliable to stars later than A0 and emiss
 
 ----------------------
 
-04-10-26 T22:33  
+## 04-10-26 T22:33  
 
 **Read Hanson_1998**  
 https://iopscience.iop.org/article/10.1086/300556/pdf  
@@ -229,7 +229,7 @@ luminosity effect needs a larger star sample.
 -------------------
 
 
-07-10-2026 T22:10  
+## 07-10-2026 T22:10  
 **Read arXiv:1902.07607**  
 https://arxiv.org/pdf/1902.07607  
 OB stars are hot, bright stars that help us study stellar evolution and the structure of the Milky Way. Earlier catalogues mainly contained nearby or bright objects,
@@ -285,7 +285,7 @@ come from survey selection rather than different stellar origins.
 
 -----------------
 
-08-10-2026 T16:15  
+## 08-10-2026 T16:15  
 **Read arXiv:2110.10669**  
 https://arxiv.org/pdf/2110.10669  
 older B star classification standards had inconsistent labels and the reference stars that were used were unsuitable and with time the classifcation needed an upgrade. The authors revised the grid and updated the criteria 
@@ -314,7 +314,7 @@ physical property of the star, it just means it gives consistent measurements of
 
 -----------------------
 
-10-10-2026  T16:25
+## 10-10-2026  T16:25
 **Read arXiv:astro-ph/9808206**  
 https://arxiv.org/pdf/astro-ph/9808206  
 Dust makes stars difficult to observe in visible light, while warm dust can add infrared light that makes their absorption lines appear weaker.
@@ -348,7 +348,7 @@ measurement errors, rather than a large independent test of all dust-obscured st
 -----------------------
 
 
-12-10-2026  T20:05  
+## 12-10-2026  T20:05  
 **Read arXiv:2511.02221**    
 https://arxiv.org/pdf/2511.02221  
 The emission lines of Be stars can vary in strength and form, so that they are hard to find in large surveys. Authors
@@ -367,12 +367,12 @@ Separated into 70% training and 30% test set. The first 1800 flux values (from a
 High flux outlier and short missing sections interpolated. The model was composed of three bidirectional LSTM layers and three convolutional layers.
 Two layers and a final classification output. It was used for DR11, MKCLASS and visual identification of B candidates.
 Confirmed objects were compared to the catalogues of H-alpha emission and searched for Be features. The extinction-corrected H-K and K-W1 colors.
-These were then used to separate the classical and Herbig Be candidates.
+These were then used to separate the classical and Herbig Be candidates.  
 **Key-results:** Test accuracy for 6 classes was 97.86% and precision and recall for B class both 99.33%. These values represent the average values across the broad spectrum.
 Classification and not direct Be identification. The model was chosen based on 55667 B candidates, with 20,037 of these being removed due to overlap with other spectra.
 40,223 B-type spectra were received of which 20,186 were confirmed, a figure of 34,630 new candidates. The authors claimed 8298 Be stars,
 Which comprises 4511 new discovered objects. The sample size of each subset of the new data is listed below.The number of stars in each subset of the new sample is given as follows: classical Be, 3363; Herbig Be, 35; mixed, 870; possible Herbig, 18.
-Be and 225 with insufficient infrared data.
+Be and 225 with insufficient infrared data.  
 **Drawbacks:** Despite this, weak or variable emission objects might need to be identified manually and using emission catalogues; be identification is still required.
 missed. The high test accuracy is not necessarily indicative of a high proportion of survey candidates since only 58.3% of new B candidates were verified.
 purity. A separate final untouched test set and separation of repeat observations by unique star are not clearly described, creating,
@@ -382,7 +382,7 @@ one table heading where its infrared categories add up to 4511.
 
 -----------------------
 
-16-10-2026  T22:14
+## 15-10-2026  T22:14
 **Read arXiv:2305.00305**   
 https://arxiv.org/pdf/2305.00305  
 The older spectral classes are not always reliable in identifying blue supergiants. The authors wished to use a more consistent method to choose luminescent late O.
@@ -415,7 +415,7 @@ Winds can affect binary spectra and profiles, and need to be inspected. The prim
 To LAMOST, it was necessary to check the behaviour at lower resolution and different noise level, which is not done in this paper.
 -----------------------
 
-15-10-2026  T16:28
+## 16-10-2026  T16:28
 **Read arXiv:2410.15242**   
 https://arxiv.org/pdf/2410.15242  
 Many late B stars were overlooked in the previous LAMOST OB catalogue due to their similar spectrum with early A stars. The authors updated the selection rules
