@@ -1,7 +1,7 @@
 # Theory finding Log
 **Logs containing any information I understand myself by reading papers etc in my own words**
 
-28-09-26 T22:26   
+## 28-09-26 T22:26   
 **Flags & Labels**
 
 Flags basically tell us if a condition is true or false for example if any pixel in our data is good or bad,
@@ -16,7 +16,7 @@ describe how we obtained the star data or how it was targeted.
 
 -------------
 
-29-09-26 T23:41  
+## 29-09-26 T23:41  
 **Index**  
 
 The fits file contain different index value containing different details about the spectrum or the data available.
@@ -30,7 +30,7 @@ The fits file contain different index value containing different details about t
 
 --------------
 
-30-09-26 T00:20  
+## 30-09-26 T00:20  
 **Method for B type stars**  
 Normally Optical spectra was used for the classification of B type stars, it provides a wide range of 
 spectral lines such as He I , He II , Si I , balmer lines etc. However, the saturation and relative strength of 
@@ -45,8 +45,7 @@ spectra better for automated fitting however the main drawback is that we cannot
 common line found in NIR and cannot be used as standard benchmarking line.
 
 -----------
-02-10-26 T18:44
-<a id="reason"></a>
+## 02-10-26 T18:44
 ## FWHM
 **Brackett line FWHM working better in cooler stars**  
 The reason that FWHM (full width at half maximum is the flux between continuum and line minimum) works better with cooler stars
@@ -55,7 +54,7 @@ will have larger radius but lower surface gravity compared to a dwarf star so th
 so thats why with stars that are cooler are narrower FWHM.
 
 --------------
-02-10-26 T19:51 
+## 02-10-26 T19:51 
 ## Gaia Distance 
 Gaia was an astrometric mission designed to make an accurate 3D map of the milky way,
 It calculates the red shift of the star and, then we can calculate the distance of the star using the red shift,
@@ -63,7 +62,7 @@ it was used so that the luminosity classification was making physical sense with
 
 ---------------
 
-02-10-26 T20:48
+## 02-10-26 T20:48
 ## Luminosity Criteria  
 **For arXiv:2407.04163**  
 The main criteria for luminosity the paper (2407.04163) is the width of wings of H balmer absorption lines especially H-Alpha. Keeping the spectral 
@@ -82,7 +81,7 @@ criterion unreliable for them.
 
 
 
-02-10-26 T21:47
+## 02-10-26 T21:47
 
 ## Stellar winds
 
@@ -94,7 +93,7 @@ on interstellar winds along with surface.
 
 -----------
 
-03-10-26 T22:15
+## 03-10-26 T22:15
 ## Metal lines
 
 I've noticed that B type stars in NIR mostly have abuandance of metal lines while He I and He II are still present in some amount, however this is not
@@ -102,7 +101,7 @@ the case for O type stars, they only have He and Si lines for the most part.
 
 ------------
 
-04-10-26 T 22:40  
+## 04-10-26 T 22:40  
 ## Br11
 Dwarfs show broader Br11 profiles mainly because they have high surface gravity, which produces a denser pressure gas in the atmosphere where the line forms,
 Nearby electrons and ions create electric fields that disturb hydrogen’s energy levels. This spreads the absorption over a wider range of wavelengths,
@@ -110,7 +109,7 @@ producing broad wings around Br11.
 
 ----------
 
-06-10-26 T17:12
+## 06-10-26 T17:12
 ## Spitzer and hershel telsecope
 
 **Spitzer**  
@@ -130,7 +129,7 @@ lie near warmer dust.
 
 ---------
 
-07-10-26 T22:30  
+## 07-10-26 T22:30  
 ## Galactic Latitude  
 Galactic latitude (b) is the distance of a star or any object above or below the plane of the milky way galaxy when the sun is our reference point. 
 Milky way is roughly shaped like a disk and the Galactic latitude how far the object is from the disk's central plane.
@@ -144,5 +143,15 @@ bigger number but other stars such as A, F, G are also present but in small numb
 
 -------------
 
+## 23-10-2026 T18:20  
+**MKCLASS**  
 
+MKCLASS is a program which automatically classifies stellar spectra by comparing them with standard stars on the Morgan-Keenan (MK) system.
+Provides a spectral type and luminosity class, such as B2 V for a B2 main-sequence star.
+It initially assumes a basic type, and then adjusts with the help of spectral characteristics and matching with standards.
+The optical properties of OB stars of interest are He I and He II for O types, Si ionization ratio for earlier B types, and He I/Mg II for later B types.
+When compared at the same subtype, Balmer profiles and other features can be used to help determine luminosity class.
 
+MKCLASS can classify large samples, and may give us provisional classifications of our SDSS research.
+The manual term manual is used because O-star classification is considered to be a very basic classification, and results need visual checking.
+It is not directly designed for classification of H-band spectra, and its accuracy is not tested on our spectra.
