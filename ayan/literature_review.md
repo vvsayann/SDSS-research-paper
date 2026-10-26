@@ -498,3 +498,47 @@ Not to be assumed that should be an unbiased sample of all B stars. Stars recove
 
 
 
+## 26-10-2026  T18:40
+**Read arXiv:2110.06246**  
+https://arxiv.org/pdf/2110.06246  
+authors examined whether it is possible to derive the early-type stellar parameter with a consistent way from LAMOST spectra by machine learning.
+They employed SLAM (Stellar LAbel Machine) and synthetic TLUSTY spectra. The outputs are: effective temperature, surface gravity, metallicity, and projected rotational velocity,
+Instead of MK subtype labels. This makes the paper more useful for our classification work, since even the stars bearing the same label may exhibit different physical properties which affect their lines.
+
+| Feature / method                       | Purpose                                                            |
+|----------------------------------------|--------------------------------------------------------------------|
+| Non-LTE TLUSTY model spectra           | Supply spectra with specified physical parameters                  |
+| SLAM support vector regression         | Learn the relation between parameters and spectral flux            |
+| Balmer and He I features               | Help constrain temperature and surface gravity                     |
+| Rotational broadening                  | Represent projected rotational velocity, v sin i                   |
+| Synthetic tests and observed standards | Compare internal performance with performance on real spectra      |  
+
+SLAM learns a forward model: it's a prediction of the spectrum that a set of stellar parameters should produce. Parameters for an observed spectrum can be estimated by finding
+Values that maintain its flux pattern. In this approach, measurements are combined together and are effective when measurements are influenced by overlapping features such as temperature, gravity, and rotation.
+But as long as the training spectra represent the behavior of a flexible algorithm can only learn that behavior.
+
+The observed spectra have been normalised and the radial velocities corrected prior to fitting. The low-resolution survey was done with synthetic spectra that were broadened and adapted for R ~ 1800.
+The survey was conducted in medium resolution with R ~ 7500. The training sets adopted were 1000 and 5000 spectra. The temperature grid start at 15,000 K for B stars.
+Therefore, its use with cooler late-B stars is beyond the scope of training. This is not extrapolating a value that exists between values that are already represented in the grid.
+Validation comprised synthetic tests and observations of 28 stars observed at high resolution and degraded to the survey resolutions. This second check is particularly useful: synthetic tests ask if
+Parameters for the method can be extracted from its model family, and observed standards show the differences between models and actual stellar spectra.
+
+**Key-results:** The training boundaries are brackets for 3,931 low resolution targets and 578 medium resolution targets.The training boundaries are brackets for 3,931 low resolution targets and 578
+medium resolution targets. The reported scatter against published high-resolution estimates was:
+
+| Parameter                    | Low resolution | Medium resolution |
+|------------------------------|----------------|-------------------|
+| Effective temperature        | 1,642 K        | 2,185 K           |
+| Surface gravity, log g       | 0.25 dex       | 0.29 dex          |
+| Projected rotation, v sin i  | 42 km/s        | 11 km/s           |
+
+Low resolution spectra are better to constrain temperature and gravity due to the wider wavelength coverage, whereas medium resolution are better to constrain rotation.
+An important design consideration for our work is that if we increase the resolution, it does not necessarily mean increasing the estimates, if we lose some wavelengths in the process.
+
+**Drawbacks:** The majority of catalogue predictions are extrapolations and provided as provisional estimates. The lower temperature limit is therefore a limiting factor for our late-B work,
+It's no small matter. This is one of the reasons why a model-only validation is not enough, since smaller errors were achieved with synthetic tests.
+Finally, the external comparison has only 28 stars, which is not enough to serve as a representative uncertainty for all survey targets.
+These parameters may help answer the questions of why there are disagreements between subtype labels for our project, but would not be definitive labels since they would bring their model assumptions and errors to a classifier.
+If a comparison of subtypes were to be attempted, the parameter uncertainties would have to be preserved and the predictions within the training grid would have to be separated from the predictions that lie beyond the grid.
+
+-----------------------
