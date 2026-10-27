@@ -539,6 +539,6 @@ An important design consideration for our work is that if we increase the resolu
 It's no small matter. This is one of the reasons why a model-only validation is not enough, since smaller errors were achieved with synthetic tests.
 Finally, the external comparison has only 28 stars, which is not enough to serve as a representative uncertainty for all survey targets.
 These parameters may help answer the questions of why there are disagreements between subtype labels for our project, but would not be definitive labels since they would bring their model assumptions and errors to a classifier.
-If a comparison of subtypes were to be attempted, the parameter uncertainties would have to be preserved and the predictions within the training grid would have to be separated from the predictions that lie beyond the grid.
-
+If a comparison of subtypes were to be attempted, the parameter uncertainties would have to be preserved and the predictions within the training grid would have to be separated from the predictions that lie beyond the grid.  
+[Model findings](./theory.md#paper-findings-1)
 -----------------------

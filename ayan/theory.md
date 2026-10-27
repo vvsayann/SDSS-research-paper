@@ -164,3 +164,19 @@ LAMOST (Large Sky Area Multi-Object Fiber spectroscopic Telescope) is a ground b
 spectra of thousands of object at the same time. It mainly covers Northern Celestial hemisphere ( δ > 0°) however some Southern Hemisphere objects are also accessible 
 but with limitation of Telescope's pointing limits. It collects data from Milky way, Hot stars (O type , B type) , Metal-poor stars , Binary stars, Quasars etc. LAMOST's target Galactic region
 coincidentally where our target stars (OB type) lie in majority and that's why we see most of the papers use LAMOST for the dataset. 
+
+------------------
+
+## 27-10-2026 15:57
+## Paper Findings #1  
+The authors did not develop a new model instead they used existing models.
+1. They obtained synthetic spectra through TLUSTY with known parameters such as Effective Temperature, surface gravity and metallicity.
+2. They obtained more training data through linear relationships and they then matched / used the spectra that matches with LAMOST resolution ( R ~ 1800 to 7500).
+3. They trained 1000 spectra for low resolution, and 5000 spectra for medium resolution. 
+They used the model SLAM which is publicly available, SLAM is a forward spectral model which learns the relationship for spectral flux ,
+$$
+{\theta} = (T_{\mathrm{eff}}, \log g, [M/H], v\sin i)
+$$
+basically it eventually picks up how a synthetic spectra should like look according to stellar parameters, when given it a real spectra it searches for the parameters around which a synthetic 
+spectra is generated. 
+https://github.com/hypergravity/astroslam
