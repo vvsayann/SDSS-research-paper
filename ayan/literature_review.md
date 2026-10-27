@@ -533,7 +533,7 @@ medium resolution targets. The reported scatter against published high-resolutio
 | Projected rotation, v sin i  | 42 km/s        | 11 km/s           |
 
 Low resolution spectra are better to constrain temperature and gravity due to the wider wavelength coverage, whereas medium resolution are better to constrain rotation.
-An important design consideration for our work is that if we increase the resolution, it does not necessarily mean increasing the estimates, if we lose some wavelengths in the process.
+An important design consideration for our work is that if we increase the resolution, it does not necessarily mean increasing the estimates, if we lose some wavelengths in the process.  
 
 **Drawbacks:** The majority of catalogue predictions are extrapolations and provided as provisional estimates. The lower temperature limit is therefore a limiting factor for our late-B work,
 It's no small matter. This is one of the reasons why a model-only validation is not enough, since smaller errors were achieved with synthetic tests.
