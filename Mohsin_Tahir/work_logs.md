@@ -32,3 +32,6 @@ and reviewed (Roman-Lopes et al. 2024)
 
 
 10/22/26 read and reviewed https://arxiv.org/pdf/2110.10669 and https://doi.org/10.3389/fspas.2021.634328
+
+10/30/26
+-read and reviewed https://arxiv.org/pdf/2608.30200 and https://arxiv.org/pdf/1505.05940

@@ -397,3 +397,163 @@ capability on unseen observational data.
 
 The pre-processed training datasets and the complete Python code implementing the Random Forest 
 classifiers are publicly available on GitHub at `https://github.com/EliasKyritsis/SpectralClassifier.
+
+
+--------------------------------------------------
+
+## 10/29/26 (thursday)
+### Spectral classification of stars based on LAMOST spectra https://arxiv.org/pdf/1505.05940
+
+#### 1. Introduction:
+
+In this paper, the authors address the unreliability of the official LAMOST pipeline 
+particularly for O, B, A, and M stars by classifying low-resolution stellar spectra ($R \sim 1800$) 
+using Equivalent Width (EW) line indices. Using EW line indices avoids LAMOST's difficult 4,000-fiber flux calibration
+and avoids interstellar dust reddening. By cross-matching 1.52 million high signal-to-noise ($S/N > 20$) 
+LAMOST DR2 spectra with the SIMBAD catalog, the authors obtain 3,134 labeled stars and compare two classification 
+approaches: mapping a continuous stellar locus using 5 composed EW line indices, and 
+training a supervised Support Vector Machine (SVM) using 27 EW line indices.
+
+#### 2. Methodology:
+
+##### 2.1 LAMOST-SIMBAD Dataset and 27 EW Line Indices
+
+The authors select 1.52 million LAMOST DR2 spectra with $S/N > 20$ in both the g and i bands and cross-match 
+them with SIMBAD to obtain 3,134 normal stars with known MK labels the authors define 27 spectral line indices in the blue optical 
+region—specifically 
+adding three Helium lines (He 4388, He 4471, and He 4542) to help separate OB-type stars—and 
+calculate their equivalent widths with a median uncertainty under 0.1 Angstroms.
+
+##### 2.2 Continuous Stellar Locus Mapping
+
+Because many of the 27 spectral lines are correlated, the authors compress them into 5 representative 
+line indices ($H_{\gamma}$, composed Mg, composed Fe, the G4300 CH band, and $\text{TiO}_2$) to map the 
+1.52 million LAMOST stars and 3,134 SIMBAD reference stars in 2D line-index planes. 
+This creates a natural, continuous stellar locus ordered smoothly by effective temperature 
+from O6-9 to M3-6 without imposing artificial class boundaries.
+
+##### 2.3 Support Vector Machine (SVM) Classification
+
+To test automated discrete MK classification, the authors split the 3,134 SIMBAD stars equally into training 
+and testing sets (~1,567 stars each) and train an SVM using `LIBSVM` on all 27 line indices. 
+Because there are only 8 O-type stars in the entire sample, O and B stars are merged into a single 
+OB class alongside A, F, G, K, and M classes, ignoring decimal subtypes and luminosity classes.
+
+## 3. Key Contributions
+
+- It demonstrates that equivalent width line indices can organize 1.52 million LAMOST spectra along a 
+continuous temperature sequence from O to M stars without requiring flux calibration or reddening corrections.
+
+- It provides empirical median EW lookup tables across 5 key line indices 
+($H_{\gamma}$, Mg, Fe, G4300, and $\text{TiO}_2$) for both main-sequence dwarfs and giant stars.
+
+- It proves that continuous line-index locus selection is superior to discrete supervised machine learning 
+(SVM) when training catalogs suffer from class imbalance and inconsistent human eye labels.
+
+## 4. Limitations
+
+- The 3,134 SIMBAD reference sample is severely imbalanced, containing only 8 O-type stars in total 
+(and only 6 main-sequence O6-9 stars) compared to 420 A0 stars and 435 G0 stars, 
+forcing the authors to merge O and B stars into one coarse OB bucket.
+
+- The supervised SVM classifier fails and misclassified on nearly half of the OB stars because late B-type 
+stars 
+(B8 and B9, which dominate the B sample) have spectral features nearly identical to 
+abundant early A-type stars.
+
+## 5. Results
+
+In the 5-index stellar locus analysis, combining $H_{\gamma}$ with metal and 
+molecular bands successfully ordered main-sequence stars continuously from O6-9 to M3-6 
+In the automated SVM experiment using all 27 line indices, 
+common A and G stars achieved high completeness above 90% (90.38% and 90.91%), and F and M stars reached 
+72.26% and 68.57%. However, for OB-type stars, SVM completeness dropped to just 52.60% with a contamination 
+rate of 24.06%. Specifically, 44.79% of true OB stars were misclassified as A-type stars 
+due to weak spectral differences across the 
+late-B/early-A border and inconsistent visual classifications in SIMBAD.
+
+## Model Availability:
+
+There is no pre-trained SVM model repository provided by the authors.
+
+---------------------------------
+
+## 10/29/26 (Thursday)
+### OB stars identified in LAMOST Data Release 10 https://arxiv.org/pdf/2608.30200
+
+### 1. Introduction:
+
+In this paper, the authors construct a comprehensive catalog of massive, young OB-type stars 
+(ranging from O2 to B9) using 11,544,238 low-resolution spectra ($R \sim 1800$) from LAMOST Data Release 10 
+(DR10). Building directly upon the Equivalent Width (EW) line-index methodology established in earlier 
+LAMOST studies, the authors combine Gaia DR3 astrometry with spectral line-index cuts and visual inspection 
+to separate true massive OB stars from low-mass hot subdwarfs, white dwarfs, and cooler A/F/G stars. 
+They then apply the automated MKCLASS software to assign detailed MK subtypes and luminosity classes.
+
+### 2. Methodology:
+
+##### 2.1 Initial Filtering and Gaia DR3 H-R Diagram Selection
+
+The authors first select 6,808,939 LAMOST DR10 spectra (5,217,192 stars) with g-band signal-to-noise 
+ratios $S/N_g \ge 15$ and cross-match them with Gaia DR3 parallaxes and photometry. 
+For 4,228,071 stars with reliable astrometry ($\text{RUWE} \le 1.4$ and parallax error $\le 20\%$), 
+they apply two linear cuts on the Gaia Hertzsprung-Russell diagram ($M_G$ vs. $G_{\text{BP}} - G_{\text{RP}}$)
+to isolate luminous upper-left OB candidates while eliminating dim lower-left hot subdwarfs (sdBs) and 
+white dwarfs, retaining stars without reliable Gaia data to avoid losing distant targets.
+
+##### 2.2 Equivalent Width Line-Index Cuts and Visual Verification
+To filter out cooler stars 
+the authors measure equivalent widths for $\text{Ca II K}$ (3933 A), $H_{\gamma}$ (4340 A), and 
+the mean of nine Iron lines ($\text{EW}_{\text{Fe}}$) across 3,427,881 candidate spectra. 
+By applying empirical threshold cuts in the $\text{EW}_{\text{Ca II K}}$ vs. $\text{EW}_{H_{\gamma}}$ 
+and $\text{EW}_{\text{Fe}}$ vs. $\text{EW}_{H_{\gamma}}$ planes to remove spectra with high Calcium and Iron, 
+the sample is narrowed down to 158,748 spectra (123,664 stars). These are then visually inspected in the 
+3850-4750 A blue region to confirm O-type stars via He II (4200, 4541, 4686 A) 
+lines and B-type stars via He I and Mg II 4481 A lines.
+
+##### 2.3 MKCLASS Sub-Classification
+
+The authors convolve the MKCLASS standard template library (`libnor18`) from 1.8 A to 2.8 A FWHM 
+(`libnor18-28`) to match LAMOST's $R \sim 1800$ resolution and automatically assign MK spectral subtypes and 
+luminosity classes via chi-square minimization.
+
+### 3. Key Contributions
+
+- It identifies 48,463 low-resolution spectra of 34,550 confirmed massive OB stars in LAMOST DR10, 
+including 6,907 newly discovered OB stars, achieving a 99.92% recovery rate on high-S/N LAMOST test samples.
+
+- It demonstrates an effective two-step pre-screening pipeline that combines Gaia DR3 
+H-R diagram cuts (to remove low-mass hot subdwarf and white dwarf contaminants) with 
+EW line-index cuts ($\text{Ca II K}$, $H_{\gamma}$, and Fe) that reduce 3.42 million candidates by over 95%.
+
+- It provides automated MKCLASS spectral subtypes, spatial mappings across the Local, Perseus, and 
+Outer Galactic spiral arms, and a catalog of 1,960 runaway OB star candidates (1,949 newly identified).
+
+### 4. Limitations
+
+- Because late B-type and early A-type stars overlap near the EW line-index boundaries, 
+the pipeline still required manual visual inspection of 158,748 candidate spectra to 
+eliminate A-type contaminants.
+
+- In the automated MKCLASS sub-classification, 8,950 stars (~26% of the catalog) 
+could not be assigned a single clean MK class because they exhibited chemically peculiar 
+late-B features (such as mismatched Ca II K, Hydrogen, and metal line types), 
+while 861 stars failed classification due to low S/N or Be emission lines.
+
+- Consistent with earlier LAMOST catalogs, the final sample remains heavily skewed 
+toward late-B/early-A stars (B7-A1), whereas O-type (O6-O9) and early B-type (< B3) stars are 
+scarce due to intrinsic rarity and survey selection biases.
+
+### 5. Results
+
+Through Gaia H-R diagram filtering, EW line-index cuts, and 
+visual verification, the authors compiled 48,463 spectra of 34,550 OB stars (6,907 new). 
+Automated MKCLASS fitting assigned both definite spectral subtypes and luminosity classes to 24,638 stars 
+(with 22,960 rated "good" or better) and identified 8,950 chemically peculiar late-B stars. 
+
+
+### Model Availability:
+
+The complete catalogs of 34,550 LAMOST DR10 OB stars are published in machine-readable format, and 
+the automated classification relies on the publicly available `MKCLASS` software package paired with 
+the convolved `libnor18-28` standard library.
