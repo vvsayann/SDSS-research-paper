@@ -542,3 +542,44 @@ These parameters may help answer the questions of why there are disagreements be
 If a comparison of subtypes were to be attempted, the parameter uncertainties would have to be preserved and the predictions within the training grid would have to be separated from the predictions that lie beyond the grid.  
 [Model findings](./theory.md#paper-findings-1)
 -----------------------
+
+
+## 28-10-2026  T20:38
+**Read arXiv:1409.4668**  
+https://arxiv.org/pdf/1409.4668  
+The authors have analysed H-band emission features in Be stars from SDSS-III/APOGEE. Circumstellar gas disks, which add to the spectral lines in be stars.
+Thus, the Brackett profile may contain information regarding both the photosphere and the disk. This is directly applicable to our reading for Br11/Br13:
+It can be misleading to use a relation based on a normal absorption spectrum if the emission modifies the line strength or shape observed.
+
+| Spectral feature / method             | Purpose                                                                |
+|---------------------------------------|------------------------------------------------------------------------|
+| Br11 and other Brackett profiles      | Identify emission and shell absorption                                 |
+| Separation of violet and red peaks    | Investigate the velocities of line-emitting disk material              |
+| Violet/red peak intensity ratio, V/R  | Describe asymmetry between the two emission peaks                      |
+| Fe II and C I emission                | Compare line formation in different disk regions                       |
+| Repeated observations                 | Examine changes that a single observation may miss                     |
+
+The sample size is 238 stars observed 1082 times, primarily at R ~ 22500. Of these, 202 were found through visual inspection and 36 were deliberately targeted.
+The authors normalised the spectra and measured the resolved emission peaks (typically with S/N > 50). Contaminated measurements were not used.
+They were not tasked to produce an automatic classifier for normal B-star subtypes, but instead were asked to detect and classify the emission features.
+
+The peak separation is the difference in velocity between the approaching and receding material producing the emission. If the interpretation adopted is the rotating-disk interpretation,
+The greater separation tends to indicate that the material is moving at a greater speed closer to the star. The V/R ratio is a different question: It compares peak heights,
+so it does not measure the total strength of the emission, but rather asymmetry. The two profiles shown above can have different information regarding disk structure because their total strength is the same.
+If features are selected later to be a part of a classifier, these distinctions will be important, because EW is not an interchangeable measurement with peak separation and peak ratio.
+
+**Key-results:** 128 stars were newly reported for emission. Weaker Brackett lines tended to have larger peak separations, as they tend to form at a closer distance to the star,
+Fe II emission mapped the more distant areas. The mean Br11-line-emitting radius estimate was 2.21 +/- 0.73 stellar radii for 19 non-shell stars having approximately symmetric peaks.
+The result is for a selected subset of the data, and a model-based line-formation radius, not a direct measurement of the radius for each disk in the catalogue.
+
+The primary implication for our classification work is that different infrared lines may have different responses to the same disk. A shift in the Br11/Br13 measurement.
+Need not be a change in the temperature of the stars. We should first determine whether the profile has emission, shell absorption or asymmetry before trying to use it as an indicator of a subtype.
+This is our calibration of the paper based on the results it provided, but not a subtype calibration as established by this study.
+
+**Drawbacks:** These spectra are not classified in the approach developed by the authors, as He I 17007 Å is not included in the APOGEE spectral range.
+The emission measurements are complicated by the Br12/Br14 continuum placement, and by airglow and underlying photospheric absorption which were not removed prior to peak separations.
+Estimates of disk-radius are based on the rotating-disk assumptions and are less reliable for asymmetric or shell profiles. Visual selection, targeted and variable emission.
+Also, it prevents the sample from being considered as a representative sample of all B stars. In our application, paper is used to flagging Be like profile and evaluating it separately,
+However, it is not a general automatic separation criterion for all Be stars to separate from normal B stars.
+
+-----------------------
