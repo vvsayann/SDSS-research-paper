@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-11-05T16:57:59.532429+00:00",
+  "generator": "export_spectra_csv.py",
+  "output": "C:\\Users\\yoboy\\Desktop\\SDSS-research-paper\\Spectrum\\spectra_parameters_pixels.csv",
+  "spectrum_count": 180,
+  "pixel_count": 698086,
+  "data_rows": 698086,
+  "layout": "One wavelength sample per row; zero-based pixel_index",
+  "surveys": {
+    "SDSS": 60,
+    "LAMOST": 120
+  },
+  "parameter_status": {
+    "pipeline_estimates_unvalidated": 60,
+    "missing_in_fits": 120
+  },
+  "parameter_uncertainties": "Not present in source FITS files; blank",
+  "processing": "Extraction only; native flux and inverse variance retained"
+}

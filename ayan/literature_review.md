@@ -502,7 +502,7 @@ Not to be assumed that should be an unbiased sample of all B stars. Stars recove
 **Read arXiv:2110.06246**  
 https://arxiv.org/pdf/2110.06246  
 authors examined whether it is possible to derive the early-type stellar parameter with a consistent way from LAMOST spectra by machine learning.
-They employed SLAM (Stellar LAbel Machine) and synthetic TLUSTY spectra. The outputs are: effective temperature, surface gravity, metallicity, and projected rotational velocity,
+They employed SLAM (Stellar Label Machine) and synthetic TLUSTY spectra. The outputs are: effective temperature, surface gravity, metallicity, and projected rotational velocity,
 Instead of MK subtype labels. This makes the paper more useful for our classification work, since even the stars bearing the same label may exhibit different physical properties which affect their lines.
 
 | Feature / method                       | Purpose                                                            |
@@ -583,3 +583,54 @@ Also, it prevents the sample from being considered as a representative sample of
 However, it is not a general automatic separation criterion for all Be stars to separate from normal B stars.
 
 -----------------------
+
+## 10-5-2026 T18:46
+**Read Gray & Corbally (2014, AJ 147, 80)** (MKCLASS automated classification)  
+https://www.appstate.edu/~grayro/mkclass/mkclass.pdf  
+The authors developed MKCLASS to automate classification by comparing stellar spectra directly with MK standards. It estimates a rough type and then refines the subtype and luminosity class, checking for spectral peculiarities.
+
+| Feature / method                 | Purpose                                       |
+|----------------------------------|-----------------------------------------------|
+| MK standard spectra              | Define the reference classification grid      |
+| Line ratios and spectral indices | Compare temperature and luminosity indicators |
+| Iterative comparison             | Refine the initial spectral type              |
+
+**Key-results:** The accuracy is estimated to be approximately 0.6 spectral subclass and 0.5 luminosity class by comparing it with human classifications.
+Not an accuracy guarantee for any particular OB, these are general results over the tested spectrum.
+The program classifies the subtype and luminosity class and is able to identify a few spectral peculiarities, and provides more information than just an O/B/A classification.
+In our project it could be used to give “temporary” labels optically and to give another classifier a method for comparison.
+Consistency between methods would be given by the agreement with MKCLASS but would not be a proof of the validity of either classification.
+
+**Drawbacks:** The published version is very basic and only has O-star support based on criteria in 3800 - 5600 Å, and does not directly classify APOGEE H-band spectra.
+The observed spectra should be resolved in the same way as the standards.
+The overall accuracy reported should not be assumed for our SDSS sample without verification.
+The inability to confidently establish reliable O-star subtypes, particularly with limited support for O stars, is another issue that hinders the use of B stars.
+The output of we would have to inspect the diagnostic lines and compare a subset of them with independently reviewed classifications before using the output as reference labels.
+-----------------------
+
+## 11-5-2026 T15:46
+**Read arXiv:astro-ph/0506705**   
+https://arxiv.org/pdf/astro-ph/0506705  
+The authors obtained H- and K-band spectra of 37 optically visible O3–B3 stars, covering most luminosity classes at R ~ 8000–12000.
+The atlas supports comparison with optical classifications and testing of stellar-atmosphere models.
+
+| Feature / method                       | Purpose                                             |
+|----------------------------------------|-----------------------------------------------------|
+| H- and K-band spectral profiles        | Compare OB temperature, luminosity and wind effects |
+| Atmospheric models                     | Interpret the observed line profiles                |
+| Brackett spectra of six early-A dwarfs | Help remove absorption in telluric standards        |
+
+**Key-results:** The atlas will relate the observed infrared spectra with the temperature, luminosity and wind characteristics of OB stars.
+For comparison with models of the atmosphere. The quality required varies according to the job, as detailed profile analysis will need R > 5000 and S/N > 150.
+With a broader spectral classification, R ~ 1000–2000, but with S/N ~ 100, it is still acceptable. In our work this distinction helps us to determine the amount of information that is reasonable to be extracted.
+from a spectrum. The six early-A dwarfs, whose accompanying spectra also help to eliminate hydrogen absorption, also minimize the possibility that correction residuals are caused by a lack of hydrogen absorption in telluric standards.
+confused with the characteristics of the desired star.
+
+**Drawbacks:** Although the atlas is very helpful for comparing infrared spectra, the 37 selected stars are far from a complete coverage of the subtypes and luminosity classes, and the authors did
+Not suggest them as official NR classification criteria. It doesn't cover late-B stars, and doesn't offer a full training, as the sequence ends at B3.
+Our B-star classification work is set. Comparing its survey data with other spectra would, of course, have to be done with caution as the faint or noisy spectra might not satisfy the stated quality specifications.
+For APOGEE spectra, this restriction is complicated by their narrower H-band window, in which some of the diagnostics that are available over the bulk of the atlas were not available.
+
+-----------------------
+
+
