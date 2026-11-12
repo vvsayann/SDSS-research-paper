@@ -634,3 +634,31 @@ For APOGEE spectra, this restriction is complicated by their narrower H-band win
 -----------------------
 
 
+## 12-11-2026 T19:21
+**Read arXiv:2109.09775** (LAMOST early-type stars and spectroscopic binaries)  
+https://arxiv.org/pdf/2109.09775  
+Guo et al. used medium-resolution LAMOST spectra (R ~ 7500) to identify early-type stars and look for radial-velocity changes across visits.
+The paper is relevant to our work because it shows how far a few optical line measurements can take us when grouping B stars, and how repeat spectra can flag some stars for closer inspection.
+
+| Feature / method                 | Purpose                                                |
+|----------------------------------|--------------------------------------------------------|
+| Hα and He I equivalent widths    | Group early-type stars by their optical line strengths |
+| Mg b index                       | Help screen out cooler stars                           |
+| Repeat radial-velocity measures  | Identify candidate spectroscopic binaries              |
+| Monte Carlo simulations          | Estimate the fraction missed by the observing cadence  |
+
+The authors used stars with published classifications to set boundaries in the Hα versus He I equivalent-width diagram.
+The groups were roughly O–B4, B5, B7, and B8–A4. The last group spans the B/A boundary, so its label alone would leave a late-B candidate's subtype unresolved.
+For repeat visits they measured velocities relative to each star's highest-S/N spectrum and required a statistically significant difference exceeding 15.57 km/s.
+
+**Key-results:** The final catalogue contains 9,382 early-type candidates with S/N > 40. The binary analysis used 2,911 stars with repeat observations.
+After correcting for missed detections, the authors estimated binary fractions of 68%, 52%, 44%, and 44% across the four groups from hottest to coolest.
+For our classifier, repeat-visit velocity changes could flag spectra whose line profiles or apparent subtype need to be checked for a companion's contribution.
+
+**Drawbacks:** The equivalent-width groups are too broad to serve as individual MK subtype labels. The sample excludes emission profiles, and the cuts were developed on higher-S/N, medium-resolution data.
+Sparse visits can miss binaries with small velocity shifts or poorly sampled orbits. The corrected fractions depend on the simulated period and mass-ratio distributions.
+
+-----------------------
+
+
+

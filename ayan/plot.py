@@ -1,10 +1,9 @@
-
 import os
 from astropy.io import fits
 import numpy as np
 import matplotlib.pyplot as plt
 
-filename = r'C:\Users\yoboy\Desktop\SDSS-research-paper\Spectrum\spec-56293-VB073N23V2_sp01-177.fits'
+filename = r'/Spectrum/spec-56293-VB073N23V2_sp01-177.fits'
 
 # Open FITS file
 with fits.open(filename) as hdul:
