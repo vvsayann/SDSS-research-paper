@@ -635,7 +635,7 @@ For APOGEE spectra, this restriction is complicated by their narrower H-band win
 
 
 ## 12-11-2026 T19:21
-**Read arXiv:2109.09775** (LAMOST early-type stars and spectroscopic binaries)  
+**Read arXiv:2109.09775**   
 https://arxiv.org/pdf/2109.09775  
 Guo et al. used medium-resolution LAMOST spectra (R ~ 7500) to identify early-type stars and look for radial-velocity changes across visits.
 The paper is relevant to our work because it shows how far a few optical line measurements can take us when grouping B stars, and how repeat spectra can flag some stars for closer inspection.
